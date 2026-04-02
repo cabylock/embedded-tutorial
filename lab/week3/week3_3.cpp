@@ -1,6 +1,7 @@
 #include "stm32f4xx_hal.h"
 
-
+// Cấu hình SW1, SW2, SW3 trên PC0, PC1, PC2
+// LED 1, 2, 3 trên PB13, PB14, PB15
 
 static void delay_loop(uint32_t count)
 {

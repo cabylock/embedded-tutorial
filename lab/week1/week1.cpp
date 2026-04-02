@@ -1,10 +1,9 @@
 #include "stm32f4xx_hal.h"
-#include "week1.h"
 
 
 
 
-void week1(void)
+int main(void)
 {
 	RCC->AHB1ENR |= 1 << 0;
 	GPIOA->MODER |= 1 << (2*5);
