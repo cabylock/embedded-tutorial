@@ -1,6 +1,6 @@
 #include "stm32f4xx_hal.h"
 
-int32_t led_offset=0;
+volatile int32_t led_offset=1;
 #define LED_INITIAL 13
 
 void init_button(void)
@@ -12,6 +12,9 @@ void init_button(void)
 
    GPIOC->MODER &= ~(3 << (2 * 6));
    GPIOC->PUPDR &= ~(3 << (2 * 6));
+
+   GPIOC->MODER &= ~(3 << (2 * 13));
+   GPIOC->PUPDR &= ~(3 << (2 * 13));
 }
 
 void init_led(void)
@@ -29,10 +32,12 @@ void init_interrupt(void)
 
    SYSCFG->EXTICR[(5 / 4)] |= 2 << (4 * (5 % 4)); // EXTI5 <- PC5 (SW1)
    SYSCFG->EXTICR[(6 / 4)] |= 2 << (4 * (6 % 4)); // EXTI6 <- PC6 (SW2)
+   SYSCFG->EXTICR[(13 / 4)] |= 2 << (4 * (13 % 4)); // EXTI13 <- PC13 (SW3)
 
-   EXTI->IMR |= (1 << 5) | (1 << 6);
-   EXTI->FTSR |= (1 << 5) | (1 << 6);
+   EXTI->IMR |= (1 << 5) | (1 << 6) | (1 << 13);
+   EXTI->FTSR |= (1 << 5) | (1 << 6) | (1 << 13);
    NVIC_EnableIRQ(EXTI9_5_IRQn);
+   NVIC_EnableIRQ(EXTI15_10_IRQn);
 }
 
 void EXTI9_5_IRQHandler(void)
@@ -50,6 +55,16 @@ void EXTI9_5_IRQHandler(void)
    }
 }
 
+void EXTI15_10_IRQHandler(void)
+{
+   if (EXTI->PR & (1 << 13))
+   { // SW3: reset
+      EXTI->PR |= (1 << 13);
+      led_offset = 0;
+   }
+}
+
+
 int main (void)
 {
    init_button();
@@ -60,7 +75,7 @@ int main (void)
    while (1)
    {
       GPIOB->ODR |= 1 << current_led;
-      for (volatile int i = 0; i < 1000000; i++);
+      for (volatile int i = 0; i < 500000; i++);
       GPIOB->ODR &= ~(1 << current_led);
       current_led = LED_INITIAL + (current_led - LED_INITIAL + led_offset + 3) % 3; 
    }
