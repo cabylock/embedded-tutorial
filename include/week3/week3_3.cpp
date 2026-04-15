@@ -3,9 +3,10 @@
 // Cấu hình SW1, SW2, SW3 trên PC0, PC1, PC2
 // LED 1, 2, 3 trên PB13, PB14, PB15
 
-static void delay_loop(uint32_t count)
+void delay_loop(uint32_t count)
 {
-   for (volatile uint32_t i = 0; i < count; i++);
+   for (volatile uint32_t i = 0; i < count; i++)
+      ;
 }
 
 void init_button(void)
@@ -16,16 +17,13 @@ void init_button(void)
    GPIOC->MODER &= ~(3 << (2 * 0));
    GPIOC->PUPDR &= ~(3 << (2 * 0));
 
-
    // SW2 on PC1
    GPIOC->MODER &= ~(3 << (2 * 1));
    GPIOC->PUPDR &= ~(3 << (2 * 1));
 
-
    // SW3 on PC2
    GPIOC->MODER &= ~(3 << (2 * 2));
    GPIOC->PUPDR &= ~(3 << (2 * 2));
-
 }
 
 void init_led(void)
@@ -47,7 +45,7 @@ void init_led(void)
 
 void init_interrupt(void)
 {
-   RCC->APB2ENR |= 1 << 14; 
+   RCC->APB2ENR |= 1 << 14;
 
    // SW1 -> PC0 -> EXTI0
    SYSCFG->EXTICR[0] &= ~(0 << (4 * 0));
@@ -55,11 +53,11 @@ void init_interrupt(void)
 
    // SW2 -> PC1 -> EXTI1
    SYSCFG->EXTICR[0] &= ~(0 << (4 * 1));
-   SYSCFG->EXTICR[0] |= 2 << (4 * 1); 
+   SYSCFG->EXTICR[0] |= 2 << (4 * 1);
 
    // SW3 -> PC2 -> EXTI2
    SYSCFG->EXTICR[0] &= ~(0 << (4 * 2));
-   SYSCFG->EXTICR[0] |= 2 << (4 * 2); 
+   SYSCFG->EXTICR[0] |= 2 << (4 * 2);
 
    EXTI->IMR |= (1 << 0) | (1 << 1) | (1 << 2);
    EXTI->FTSR |= (1 << 0) | (1 << 1) | (1 << 2);
@@ -82,7 +80,7 @@ void EXTI0_IRQHandler(void)
       for (int i = 0; i < 2; i++)
       {
          GPIOB->ODR |= (1 << 13);
-         delay_loop(500000); 
+         delay_loop(500000);
          GPIOB->ODR &= ~(1 << 13);
          delay_loop(500000);
       }
@@ -93,11 +91,11 @@ void EXTI1_IRQHandler(void)
 {
    if (EXTI->PR & (1 << 1))
    {
-      EXTI->PR = (1 << 1); 
+      EXTI->PR = (1 << 1);
       for (int i = 0; i < 4; i++)
       {
          GPIOB->ODR |= (1 << 14);
-         delay_loop(500000);   
+         delay_loop(500000);
          GPIOB->ODR &= ~(1 << 14);
          delay_loop(500000);
       }
@@ -109,14 +107,13 @@ void EXTI2_IRQHandler(void)
    if (EXTI->PR & (1 << 2))
    {
       EXTI->PR = (1 << 2);
-      for(int i = 0; i < 6; i++)
+      for (int i = 0; i < 6; i++)
       {
          GPIOB->ODR |= (1 << 15);
-         delay_loop(500000); 
+         delay_loop(500000);
          GPIOB->ODR &= ~(1 << 15);
          delay_loop(500000);
       }
-      
    }
 }
 
