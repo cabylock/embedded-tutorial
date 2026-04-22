@@ -7,89 +7,89 @@
  * - Echo:    PA0 (TIM2_CH1 input capture)
  */
 
-volatile uint8_t waiting_falling_edge = 0U;
-volatile uint8_t measurement_ready = 0U;
-volatile uint32_t t_rise = 0U;
-volatile uint32_t t_fall = 0U;
-volatile uint32_t duration_us = 0U;
-volatile uint32_t distance_cm = 0U;
+volatile uint8_t waiting_falling_edge = 0;
+volatile uint8_t measurement_ready = 0;
+volatile uint32_t t_rise = 0;
+volatile uint32_t t_fall = 0;
+volatile uint32_t duration_us = 0;
+volatile uint32_t distance_cm = 0;
 
 void init_led_pa5(void)
 {
-   RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
-   GPIOA->MODER &= ~(3U << (2U * 5U));
-   GPIOA->MODER |= (1U << (2U * 5U));
+   RCC->AHB1ENR |= (1 << 0);
+   GPIOA->MODER &= ~(3 << (2 * 5));
+   GPIOA->MODER |= (1 << (2 * 5));
 }
 
 void init_hcsr04_pins(void)
 {
-   RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN | RCC_AHB1ENR_GPIOBEN;
+   RCC->AHB1ENR |= (1 << 0);
 
    /* PA0 -> TIM2_CH1 (AF1) */
-   GPIOA->MODER &= ~(3U << (2U * 0U));
-   GPIOA->MODER |= (2U << (2U * 0U));
-   GPIOA->AFR[0] &= ~(0xFU << (4U * 0U));
-   GPIOA->AFR[0] |= (0x1U << (4U * 0U));
+   GPIOA->MODER &= ~(3 << (2 * 0));
+   GPIOA->MODER |= (2 << (2 * 0));
+   GPIOA->AFR[0] &= ~(0xF << (4 * 0));
+   GPIOA->AFR[0] |= (0x1 << (4 * 0));
 
-   /* PB6 -> Trigger output */
-   GPIOB->MODER &= ~(3U << (2U * 6U));
-   GPIOB->MODER |= (1U << (2U * 6U));
-   GPIOB->BSRR = (1U << (6U + 16U));
+   /* PA1 -> Trigger output */
+   GPIOA->MODER &= ~(3 << (2 * 1));
+   GPIOA->MODER |= (1 << (2 * 1));
+   GPIOA->BSRR = (1 << (1 + 16));
 }
 
 void tim2_init_input_capture(void)
 {
-   RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
+   RCC->APB1ENR |= (1 << 0);
 
    TIM2->CR1 = 0;
-   TIM2->PSC = 16U - 1U; /* 16 MHz / 16 = 1 MHz -> 1 us/tick */
-   TIM2->ARR = 0xFFFFFFFFU;
+   TIM2->PSC = 16 - 1; /* 16 MHz / 16 = 1 MHz -> 1 us/tick */
+   TIM2->ARR = 0xFFFFFFFF;
    TIM2->CNT = 0;
 
-   TIM2->CCMR1 &= ~(TIM_CCMR1_CC1S);
-   TIM2->CCMR1 |= TIM_CCMR1_CC1S_0; /* CC1 mapped to TI1 */
+   TIM2->CCMR1 &= ~(3 << 0);
+   TIM2->CCMR1 |= (1 << 0); /* CC1 mapped to TI1 */
 
-   TIM2->CCER &= ~(TIM_CCER_CC1P | TIM_CCER_CC1NP); /* Rising edge */
-   TIM2->CCER |= TIM_CCER_CC1E;
+   TIM2->CCER &= ~((1 << 1) | (1 << 3)); /* Rising edge */
+   TIM2->CCER |= (1 << 0);
 
-   TIM2->DIER |= TIM_DIER_CC1IE;
+   TIM2->DIER |= (1 << 1);
 
-   TIM2->EGR = TIM_EGR_UG;
+   TIM2->EGR = (1 << 0);
    TIM2->SR = 0;
 
    NVIC_EnableIRQ(TIM2_IRQn);
 
-   TIM2->CR1 |= TIM_CR1_CEN;
+   TIM2->CR1 |= (1 << 0);
 }
 
 void hcsr04_send_trigger(void)
 {
    uint32_t start;
 
-   GPIOB->BSRR = (1U << 6U);
+   GPIOA->BSRR = (1 << 1);
    start = TIM2->CNT;
 
-   while ((uint32_t)(TIM2->CNT - start) < 10U)
+   while ((uint32_t)(TIM2->CNT - start) < 10)
    {
    }
 
-   GPIOB->BSRR = (1U << (6U + 16U));
+   GPIOA->BSRR = (1 << (1 + 16));
 }
 
 void TIM2_IRQHandler(void)
 {
-   if (TIM2->SR & TIM_SR_CC1IF)
+   if (TIM2->SR & (1 << 1))
    {
       uint32_t captured = TIM2->CCR1;
-      TIM2->SR &= ~TIM_SR_CC1IF;
+      TIM2->SR &= ~(1 << 1);
 
-      if (waiting_falling_edge == 0U)
+      if (waiting_falling_edge == 0)
       {
          t_rise = captured;
-         waiting_falling_edge = 1U;
+         waiting_falling_edge = 1;
 
          /* Next capture on falling edge. */
-         TIM2->CCER |= TIM_CCER_CC1P;
+         TIM2->CCER |= (1 << 1);
       }
       else
       {
@@ -101,16 +101,16 @@ void TIM2_IRQHandler(void)
          }
          else
          {
-            duration_us = (0xFFFFFFFFU - t_rise) + t_fall + 1U;
+            duration_us = (0xFFFFFFFF - t_rise) + t_fall + 1;
          }
 
          distance_cm = (uint32_t)((float)duration_us / 2.0f / 29.412f);
 
-         waiting_falling_edge = 0U;
-         measurement_ready = 1U;
+         waiting_falling_edge = 0;
+         measurement_ready = 1;
 
          /* Return to rising edge capture. */
-         TIM2->CCER &= ~TIM_CCER_CC1P;
+         TIM2->CCER &= ~(1 << 1);
       }
    }
 }
@@ -130,16 +130,16 @@ int main(void)
 
       if (measurement_ready)
       {
-         measurement_ready = 0U;
+         measurement_ready = 0;
 
          /* Simple visual feedback: object closer than 20 cm -> LED ON */
-         if (distance_cm < 20U)
+         if (distance_cm < 20)
          {
-            GPIOA->BSRR = (1U << 5U);
+            GPIOA->BSRR = (1 << 5);
          }
          else
          {
-            GPIOA->BSRR = (1U << (5U + 16U));
+            GPIOA->BSRR = (1 << (5 + 16));
          }
       }
    }

@@ -9,48 +9,48 @@
 
 void init_led_pa5(void)
 {
-   RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+   RCC->AHB1ENR |= (1 << 0);
 
-   GPIOA->MODER &= ~(3U << (2U * 5U));
-   GPIOA->MODER |= (1U << (2U * 5U));
+   GPIOA->MODER &= ~(3 << (2 * 5));
+   GPIOA->MODER |= (1 << (2 * 5));
 }
 
 void toggle_led_pa5(void)
 {
-   GPIOA->ODR ^= (1U << 5U);
+   GPIOA->ODR ^= (1 << 5);
 }
 
 void tim2_config_period_ms(uint32_t period_ms, uint8_t downcounter)
 {
-   RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
+   RCC->APB1ENR |= (1 << 0);
 
    TIM2->CR1 = 0;
-   TIM2->PSC = 16000U - 1U; /* 16 MHz / 16000 = 1 kHz -> 1 ms/tick */
-   TIM2->ARR = period_ms - 1U;
+   TIM2->PSC = 16000 - 1; /* 16 MHz / 16000 = 1 kHz -> 1 ms/tick */
+   TIM2->ARR = period_ms - 1;
 
    if (downcounter)
    {
-      TIM2->CR1 |= TIM_CR1_DIR;
+      TIM2->CR1 |= (1 << 4);
       TIM2->CNT = TIM2->ARR;
    }
    else
    {
-      TIM2->CR1 &= ~TIM_CR1_DIR;
+      TIM2->CR1 &= ~(1 << 4);
       TIM2->CNT = 0;
    }
 
-   TIM2->EGR = TIM_EGR_UG;
-   TIM2->SR &= ~TIM_SR_UIF;
-   TIM2->CR1 |= TIM_CR1_CEN;
+   TIM2->EGR = (1 << 0);
+   TIM2->SR &= ~(1 << 0);
+   TIM2->CR1 |= (1 << 0);
 }
 
 void delay_period_tim2(void)
 {
-   while ((TIM2->SR & TIM_SR_UIF) == 0U)
+   while ((TIM2->SR & (1 << 0)) == 0)
    {
    }
 
-   TIM2->SR &= ~TIM_SR_UIF;
+   TIM2->SR &= ~(1 << 0);
 }
 
 int main(void)
@@ -59,15 +59,15 @@ int main(void)
 
    while (1)
    {
-      tim2_config_period_ms(1000U, 0U);
-      for (uint8_t i = 0; i < 5U; i++)
+      tim2_config_period_ms(1000, 0);
+      for (uint8_t i = 0; i < 5; i++)
       {
          delay_period_tim2();
          toggle_led_pa5();
       }
 
-      tim2_config_period_ms(2000U, 1U);
-      for (uint8_t i = 0; i < 5U; i++)
+      tim2_config_period_ms(2000, 1);
+      for (uint8_t i = 0; i < 5; i++)
       {
          delay_period_tim2();
          toggle_led_pa5();

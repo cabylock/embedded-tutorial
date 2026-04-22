@@ -10,13 +10,13 @@
 
 void init_leds(void)
 {
-   RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN | RCC_AHB1ENR_GPIOBEN;
+   RCC->AHB1ENR |= (1 << 0) | (1 << 1);
 
-   GPIOA->MODER &= ~(3U << (2U * 5U));
-   GPIOA->MODER |= (1U << (2U * 5U));
+   GPIOA->MODER &= ~(3 << (2 * 5));
+   GPIOA->MODER |= (1 << (2 * 5));
 
-   GPIOB->MODER &= ~(3U << (2U * 7U));
-   GPIOB->MODER |= (1U << (2U * 7U));
+   GPIOB->MODER &= ~(3 << (2 * 7));
+   GPIOB->MODER |= (1 << (2 * 7));
 }
 
 void delay_ms(uint32_t ms)
@@ -40,15 +40,15 @@ void delay_ms(uint32_t ms)
 
 void tim3_init_1000ms(void)
 {
-   RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
+   RCC->APB1ENR |= (1 << 1);
 
    TIM3->CR1 = 0;
-   TIM3->PSC = 16000U - 1U; /* 1 kHz */
-   TIM3->ARR = 1000U - 1U;   /* 1000 ms update */
+   TIM3->PSC = 16000 - 1; /* 1 kHz */
+   TIM3->ARR = 1000 - 1;   /* 1000 ms update */
    TIM3->CNT = 0;
-   TIM3->DIER |= TIM_DIER_UIE;
-   TIM3->EGR = TIM_EGR_UG;
-   TIM3->SR &= ~TIM_SR_UIF;
+   TIM3->DIER |= (1 << 0);
+   TIM3->EGR = (1 << 0);
+   TIM3->SR &= ~(1 << 0);
 
    NVIC_EnableIRQ(TIM3_IRQn);
 
@@ -63,7 +63,7 @@ void TIM3_IRQHandler(void)
       TIM3->SR &= ~1;
 
      
-         GPIOA->ODR ^= (1U << 5U); /* PA5 toggles every 1 s */
+         GPIOA->ODR ^= (1 << 5); /* PA5 toggles every 1 s */
 
 
       
@@ -77,7 +77,7 @@ int main(void)
 
    while (1)
    {
-      GPIOB->ODR ^= (1U << 7U);
+      GPIOB->ODR ^= (1 << 7);
       delay_ms(500);
    }
 }

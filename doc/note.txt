@@ -1,0 +1,154 @@
+STM32 Register Notes: GPIO, Interrupt, Timer
+
+1. GPIO Register Section
+
+Purpose
+- Control pin mode, output level, input read, alternate function, speed, and pull-up or pull-down.
+
+Clock enable first
+- GPIO registers work only after enabling peripheral clock in RCC.
+- Example:
+	RCC->AHB1ENR |= (1 << 0);   for GPIOA
+	RCC->AHB1ENR |= (1 << 1);   for GPIOB
+	RCC->AHB1ENR |= (1 << 2);   for GPIOC
+
+Main GPIO registers
+- MODER (2 bits per pin):
+	00 Input, 01 Output, 10 Alternate Function, 11 Analog
+	Set pin x mode using bits [2x+1:2x]
+- OTYPER (1 bit per pin):
+	0 Push-pull, 1 Open-drain
+- OSPEEDR (2 bits per pin):
+	Output speed level
+- PUPDR (2 bits per pin):
+	00 No pull, 01 Pull-up, 10 Pull-down
+- IDR (1 bit per pin):
+	Read input level
+- ODR (1 bit per pin):
+	Write output level
+- BSRR (atomic set or reset):
+	Lower 16 bits set pin, upper 16 bits reset pin
+- AFR[0], AFR[1] (4 bits per pin):
+	Select alternate function AF0..AF15
+
+Common patterns
+- Set PA5 as output:
+	GPIOA->MODER &= ~(3 << (2 * 5));
+	GPIOA->MODER |=  (1 << (2 * 5));
+- Set PA0 as alternate function AF1:
+	GPIOA->MODER &= ~(3 << (2 * 0));
+	GPIOA->MODER |=  (2 << (2 * 0));
+	GPIOA->AFR[0] &= ~(0xF << (4 * 0));
+	GPIOA->AFR[0] |=  (0x1 << (4 * 0));
+- Turn pin ON or OFF with BSRR:
+	GPIOA->BSRR = (1 << 5);         set PA5
+	GPIOA->BSRR = (1 << (5 + 16));  reset PA5
+
+2. Interrupt Register Section
+
+Purpose
+- Let hardware event trigger immediate code execution in ISR (interrupt service routine).
+
+Core pieces
+- NVIC:
+	Enables interrupt line and priority handling.
+	Example: NVIC_EnableIRQ(TIM3_IRQn);
+- EXTI (external interrupt controller):
+	Maps GPIO pin to EXTI line and detects edge.
+- Peripheral interrupt bits:
+	Enable interrupt source inside peripheral (for example TIM DIER bits).
+
+EXTI flow for button on PC13
+1. Enable GPIOC and SYSCFG clocks:
+	 RCC->AHB1ENR |= (1 << 2);
+	 RCC->APB2ENR |= (1 << 14);
+2. Map PC13 to EXTI13:
+	 SYSCFG->EXTICR[3] &= ~(0xF << 4);
+	 SYSCFG->EXTICR[3] |=  (0x2 << 4);
+3. Unmask and choose edge:
+	 EXTI->IMR  |= (1 << 13);
+	 EXTI->FTSR |= (1 << 13);
+	 EXTI->RTSR &= ~(1 << 13);
+4. Enable NVIC line:
+	 NVIC_EnableIRQ(EXTI15_10_IRQn);
+5. In ISR, clear pending bit:
+	 if (EXTI->PR & (1 << 13)) {
+			EXTI->PR = (1 << 13);
+			... handle event ...
+	 }
+
+Timer interrupt flow (example TIM3 update)
+1. Enable TIM3 clock: RCC->APB1ENR |= (1 << 1);
+2. Set PSC and ARR for period.
+3. Enable update interrupt: TIM3->DIER |= (1 << 0);
+4. Generate update event: TIM3->EGR = (1 << 0);
+5. Clear UIF: TIM3->SR &= ~(1 << 0);
+6. Enable NVIC: NVIC_EnableIRQ(TIM3_IRQn);
+7. Start timer: TIM3->CR1 |= (1 << 0);
+8. In ISR, check and clear UIF:
+	 if (TIM3->SR & (1 << 0)) {
+			TIM3->SR &= ~(1 << 0);
+			... periodic task ...
+	 }
+
+3. Timer Register Section
+
+Purpose
+- Create delays, periodic interrupts, PWM, and input capture timing.
+
+Important timer registers
+- PSC (prescaler):
+	Timer clock = TIM clock / (PSC + 1)
+- ARR (auto-reload):
+	Counter limit. Update event on overflow/underflow.
+- CNT:
+	Current counter value
+- CR1:
+	Bit 0 CEN start/stop, bit 4 DIR up/down, bit 7 ARPE preload
+- EGR:
+	Bit 0 UG forces update event
+- SR:
+	Status flags (UIF update flag, CCxIF capture compare flags)
+- DIER:
+	Interrupt enable bits (UIE, CCxIE)
+- CCMR1 and CCER:
+	Input capture or PWM channel configuration
+- CCRx:
+	Capture value or compare/PWM duty reference
+
+Frequency and period formulas
+- Tick frequency:
+	f_tick = f_tim / (PSC + 1)
+- Update frequency:
+	f_update = f_tick / (ARR + 1)
+- Update period:
+	T_update = (PSC + 1) * (ARR + 1) / f_tim
+
+Example: 1 ms timer tick at 16 MHz
+- Set PSC = 16000 - 1
+- Then tick = 1 kHz, so one count = 1 ms
+
+Example: 1 second periodic interrupt
+- PSC = 16000 - 1, ARR = 1000 - 1
+- 1 ms per tick, 1000 ticks -> 1 second
+
+Input capture notes (HC-SR04 style)
+- Configure channel as input mapped to TI1 in CCMR1.
+- Capture rising edge first, then switch to falling edge in CCER.
+- Pulse width (us) = t_fall - t_rise (with wrap handling).
+- Distance in cm approximately:
+	distance = duration_us / 58
+
+PWM notes
+- PWM frequency:
+	f_pwm = f_tim / ((PSC + 1) * (ARR + 1))
+- Duty percent using CCR:
+	CCR = ((ARR + 1) * duty_percent) / 100
+
+Quick checklist before debugging
+1. Clock enabled in RCC?
+2. Correct pin mode and AF selection?
+3. Correct PSC and ARR values?
+4. Required interrupt enable bits set in DIER and NVIC?
+5. ISR clears pending flag?
+6. Timer started with CEN?
