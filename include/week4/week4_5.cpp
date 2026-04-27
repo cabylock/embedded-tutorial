@@ -1,12 +1,5 @@
 #include "stm32f4xx_hal.h"
 
-/*
- * Week 4 - Exercise 5
- * TIM2_CH1 PWM Mode 1 on PA5
- * PWM frequency: 1 kHz
- * Duty cycle: 0% -> 100% -> 0%
- */
-
 void init_pa5_tim2_ch1(void)
 {
    RCC->AHB1ENR |= (1 << 0);
@@ -27,7 +20,8 @@ void tim2_init_pwm_1khz(void)
    TIM2->ARR = 1000 - 1; /* 1 MHz / 1000 = 1 kHz */
    TIM2->CCR1 = 0;
 
-   TIM2->CCMR1 &= ~((3 << 0) | (7 << 4));
+   TIM2->CCMR1 &= ~(3 << 0); 
+   TIM2->CCMR1 &= ~(7 << 4);
    TIM2->CCMR1 |= (6 << 4); /* PWM mode 1 */
    TIM2->CCMR1 |= (1 << 3);
 
@@ -61,7 +55,7 @@ int main(void)
    while (1)
    {
       set_pwm_duty_percent((uint32_t)duty);
-      HAL_Delay(15);
+      for(volatile int i = 0 ; i<10000; i++);
 
       duty += step;
 
