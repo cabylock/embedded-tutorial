@@ -20,11 +20,11 @@ void USART2_SendString(const char *str)
 
 void USART2_Init(void)
 {
-   RCC->AHB1ENR |= (1 << 0); //GPIOA
-   RCC->APB1ENR |= (1 << 17); //USART2
+   RCC->AHB1ENR |= (1 << 0); //gpioa
+   RCC->APB1ENR |= (1 << 17); //usart2
 
-   GPIOA->MODER |= (2 << (2 * 2)); //PA2 alternate function
-   GPIOA->AFR[0] |= (7 << (4 * 2)); //AF7 for USART2
+   GPIOA->MODER |= (2 << (2 * 2)); //pa2 alternate function
+   GPIOA->AFR[0] |= (7 << (4 * 2)); //af7 for usart2
 
    USART2->BRR = (104 << 4) | 3 ; // baud rate 9600 bps
 

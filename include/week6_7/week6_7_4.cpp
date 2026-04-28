@@ -1,11 +1,6 @@
 #include "stm32f4xx_hal.h"
 
-/*
- * Week 4 - Exercise 4
- * Input Capture with HC-SR04
- * - Trigger: PB6 (output)
- * - Echo:    PA0 (TIM2_CH1 input capture)
- */
+
 
 volatile uint8_t waiting_falling_edge = 0;
 volatile uint8_t measurement_ready = 0;
@@ -25,13 +20,13 @@ void init_hcsr04_pins(void)
 {
    RCC->AHB1ENR |= (1 << 0);
 
-   /* PA0 -> TIM2_CH1 (AF1) */
+   /* pa0 -> tim2_ch1 (af1) */
    GPIOA->MODER &= ~(3 << (2 * 0));
    GPIOA->MODER |= (2 << (2 * 0));
    GPIOA->AFR[0] &= ~(0xF << (4 * 0));
    GPIOA->AFR[0] |= (0x1 << (4 * 0));
 
-   /* PA1 -> Trigger output */
+   /* pa1 -> trigger output */
    GPIOA->MODER &= ~(3 << (2 * 1));
    GPIOA->MODER |= (1 << (2 * 1));
    GPIOA->BSRR = (1 << (1 + 16));
@@ -42,14 +37,14 @@ void tim2_init_input_capture(void)
    RCC->APB1ENR |= (1 << 0);
 
    TIM2->CR1 = 0;
-   TIM2->PSC = 16 - 1; /* 16 MHz / 16 = 1 MHz -> 1 us/tick */
+   TIM2->PSC = 16 - 1; /* 16 mhz / 16 = 1 mhz -> 1 us/tick */
    TIM2->ARR = 0xFFFFFFFF;
    TIM2->CNT = 0;
 
    TIM2->CCMR1 &= ~(3 << 0);
-   TIM2->CCMR1 |= (1 << 0); /* CC1 mapped to TI1 */
+   TIM2->CCMR1 |= (1 << 0); /* cc1 mapped to ti1 */
 
-   TIM2->CCER &= ~((1 << 1) | (1 << 3)); /* Rising edge */
+   TIM2->CCER &= ~((1 << 1) | (1 << 3)); /* rising edge */
    TIM2->CCER |= (1 << 0);
 
    TIM2->DIER |= (1 << 1);
@@ -88,7 +83,7 @@ void TIM2_IRQHandler(void)
          t_rise = captured;
          waiting_falling_edge = 1;
 
-         /* Next capture on falling edge. */
+         /* next capture on falling edge. */
          TIM2->CCER |= (1 << 1);
       }
       else
@@ -109,7 +104,7 @@ void TIM2_IRQHandler(void)
          waiting_falling_edge = 0;
          measurement_ready = 1;
 
-         /* Return to rising edge capture. */
+         /* return to rising edge capture. */
          TIM2->CCER &= ~(1 << 1);
       }
    }
@@ -132,7 +127,7 @@ int main(void)
       {
          measurement_ready = 0;
 
-         /* Simple visual feedback: object closer than 20 cm -> LED ON */
+         /* simple visual feedback: object closer than 20 cm -> led on */
          if (distance_cm < 20)
          {
             GPIOA->BSRR = (1 << 5);

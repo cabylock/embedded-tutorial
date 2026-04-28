@@ -1,82 +1,121 @@
 #include "stm32f4xx_hal.h"
 
-volatile int32_t led_offset=1;
-#define LED_INITIAL 13
+// debounce timing
+#define DEBOUNCE_DELAY 50
 
-void init_button(void)
+// pin definitions
+#define SW1_PIN 0  // pa0
+#define LED1_PIN 0 // pb0 (lsb)
+#define LED2_PIN 1 // pb1
+#define LED3_PIN 2 // pb2 (msb)
+
+// global variables
+volatile uint8_t last_sw1_state = 0;
+volatile uint8_t counter = 0;
+
+
+// init gpio
+void init_gpio(void)
 {
-   RCC->AHB1ENR |= 1 << 2; // clock for GPIOC
+    // enable clock for gpioa and gpiob
+    RCC->AHB1ENR |= (1 << 0) | (1 << 1); // gpioa and gpiob
 
-   GPIOC->MODER &= ~(3 << (2 * 5));
-   GPIOC->PUPDR &= ~(3 << (2 * 5));
+    // configure sw1 (pa0) as input with pull-down
+    GPIOA->MODER &= ~(3 << (2 * SW1_PIN)); // clear mode bits
+    GPIOA->PUPDR &= ~(3 << (2 * SW1_PIN)); // clear pull-up/down
+    GPIOA->PUPDR |= (2 << (2 * SW1_PIN));  // set pull-down
 
-   GPIOC->MODER &= ~(3 << (2 * 6));
-   GPIOC->PUPDR &= ~(3 << (2 * 6));
-
-   GPIOC->MODER &= ~(3 << (2 * 13));
-   GPIOC->PUPDR &= ~(3 << (2 * 13));
+    // configure leds (pb0, pb1, pb2) as outputs
+    GPIOB->MODER &= ~((3 << (2 * LED1_PIN)) | (3 << (2 * LED2_PIN)) | (3 << (2 * LED3_PIN)));
+    GPIOB->MODER |= ((1 << (2 * LED1_PIN)) | (1 << (2 * LED2_PIN)) | (1 << (2 * LED3_PIN)));
+    GPIOB->OTYPER &= ~((1 << LED1_PIN) | (1 << LED2_PIN) | (1 << LED3_PIN));                   // push-pull
+    GPIOB->OSPEEDR |= ((3 << (2 * LED1_PIN)) | (3 << (2 * LED2_PIN)) | (3 << (2 * LED3_PIN))); // high speed
 }
 
-void init_led(void)
+// simple delay function
+void delay_ms(uint32_t ms)
 {
-   RCC->AHB1ENR |= 1 << 1; // clock for GPIOB
-
-   GPIOB->MODER |= 1 << (2 * 13);
-   GPIOB->MODER |= 1 << (2 * 14);
-   GPIOB->MODER |= 1 << (2 * 15);
+    for (volatile uint32_t i = 0; i < ms * 1000; i++)
+        ;
 }
 
-void init_interrupt(void)
+// update led states based on counter value
+void update_leds(uint8_t value)
 {
-   RCC->APB2ENR |= 1 << 14; // enable SYSCFG clock
+    // led1 (pb0) = bit 0
+    if (value & 0x01)
+    {
+        GPIOB->BSRR = (1 << LED1_PIN); // turn on
+    }
+    else
+    {
+        GPIOB->BSRR = (1 << (LED1_PIN + 16)); // turn off
+    }
 
-   SYSCFG->EXTICR[(5 / 4)] |= 2 << (4 * (5 % 4)); // EXTI5 <- PC5 (SW1)
-   SYSCFG->EXTICR[(6 / 4)] |= 2 << (4 * (6 % 4)); // EXTI6 <- PC6 (SW2)
-   SYSCFG->EXTICR[(13 / 4)] |= 2 << (4 * (13 % 4)); // EXTI13 <- PC13 (SW3)
+    // led2 (pb1) = bit 1
+    if (value & 0x02)
+    {
+        GPIOB->BSRR = (1 << LED2_PIN); // turn on
+    }
+    else
+    {
+        GPIOB->BSRR = (1 << (LED2_PIN + 16)); // turn off
+    }
 
-   EXTI->IMR |= (1 << 5) | (1 << 6) | (1 << 13);
-   EXTI->FTSR |= (1 << 5) | (1 << 6) | (1 << 13);
-   NVIC_EnableIRQ(EXTI9_5_IRQn);
-   NVIC_EnableIRQ(EXTI15_10_IRQn);
+    // led3 (pb2) = bit 2
+    if (value & 0x04)
+    {
+        GPIOB->BSRR = (1 << LED3_PIN); // turn on
+    }
+    else
+    {
+        GPIOB->BSRR = (1 << (LED3_PIN + 16)); // turn off
+    }
 }
 
-void EXTI9_5_IRQHandler(void)
+// debounce function for switches
+uint8_t read_debounced_switch(uint8_t pin, volatile uint8_t *last_state)
 {
-   if (EXTI->PR & (1 << 5))
-   { // SW1: vòng thuận LED1 -> LED2 -> LED3 -> LED1
-      EXTI->PR |= (1 << 5);
-      led_offset = 1;
+    uint8_t current_state = (GPIOA->IDR & (1 << pin)) ? 1 : 0;
 
-   }
-   if (EXTI->PR & (1 << 6))
-   { // SW2: vòng ngược LED1 -> LED3 -> LED2 -> LED1
-      EXTI->PR |= (1 << 6);
-      led_offset = -1;
-   }
+    // check if state has changed
+    if (current_state != *last_state)
+    {
+        delay_ms(DEBOUNCE_DELAY);
+        current_state = (GPIOA->IDR & (1 << pin)) ? 1 : 0;
+
+        if (current_state != *last_state)
+        {
+            *last_state = current_state;
+            return (current_state == 1);
+        }
+    }
+
+    return 0; 
 }
 
-void EXTI15_10_IRQHandler(void)
+int main(void)
 {
-   if (EXTI->PR & (1 << 13))
-   { // SW3: reset
-      EXTI->PR |= (1 << 13);
-      led_offset = 0;
-   }
+    // init gpio
+    init_gpio();
+
+    // initial state
+    update_leds(0);
+
+    while (1)
+    {
+        // check for switch press
+        if (read_debounced_switch(SW1_PIN, &last_sw1_state))
+        {
+            // increment counter (0-7, then wrap to 0)
+            counter = (counter + 1) & 0x07;
+
+            // update leds to show current count
+            update_leds(counter);
+        }
+
+        // small delay
+        delay_ms(10);
+    }
 }
 
-
-int main (void)
-{
-   init_button();
-   init_led();
-   init_interrupt();
-
-   uint32_t current_led = LED_INITIAL; 
-   while (1)
-   {
-      GPIOB->ODR |= 1 << current_led;
-      for (volatile int i = 0; i < 500000; i++);
-      GPIOB->ODR &= ~(1 << current_led);
-      current_led = LED_INITIAL + (current_led - LED_INITIAL + led_offset + 3) % 3; 
-   }
-}

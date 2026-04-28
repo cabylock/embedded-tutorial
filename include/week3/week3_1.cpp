@@ -1,67 +1,93 @@
 #include "stm32f4xx_hal.h"
 
-void init_button(void)
+// debounce ms
+#define DEBOUNCE_DELAY 50
+
+// pins
+#define SW1_PIN 0 // pa0
+#define SW2_PIN 1 // pa1
+#define LED_PIN 0 // pb0
+
+volatile uint8_t last_sw1_state = 0;
+volatile uint8_t last_sw2_state = 0;
+
+
+// init gpio
+void init_gpio(void)
 {
-   RCC->AHB1ENR |= 1 << 2; //clock for GPIOC
+    // enable clocks
+    RCC->AHB1ENR |= (1 << 0) | (1 << 1); // gen clocks
 
-   GPIOC->MODER &= ~(3 << (2 * 13));
-   GPIOC->PUPDR &= ~(3 << (2 * 13));
+    // sw1 input 
+    GPIOA->MODER &= ~(3 << (2 * SW1_PIN)); // clear mode
+    GPIOA->PUPDR &= ~(3 << (2 * SW1_PIN)); // clear pupd
+    GPIOA->PUPDR |= (2 << (2 * SW1_PIN));  // set pd
 
-   GPIOC->MODER &= ~(3 << (2 * 8));
-   GPIOC->PUPDR &= ~(3 << (2 * 8));
+    // sw2 input 
+    GPIOA->MODER &= ~(3 << (2 * SW2_PIN)); // clear mode
+    GPIOA->PUPDR &= ~(3 << (2 * SW2_PIN)); // clear pupd
+    GPIOA->PUPDR |= (2 << (2 * SW2_PIN));  // set pd
+
+    // led output
+    GPIOB->MODER &= ~(3 << (2 * LED_PIN));  // clear mode
+    GPIOB->MODER |= (1 << (2 * LED_PIN));   // output mode
+    GPIOB->OTYPER &= ~(1 << LED_PIN);       // push-pull
+    GPIOB->OSPEEDR |= (3 << (2 * LED_PIN)); // high speed
 }
 
-void init_led(void)
+// delay
+void delay_ms(uint32_t ms)
 {
-   RCC->AHB1ENR |= 1 << 0; //clock for GPIOA
-   GPIOA->MODER |= 1 << (2 * 5);
+    for (volatile uint32_t i = 0; i < ms * 1000; i++)
+        ;
 }
 
-void init_interrupt(void)
+// debounce switch
+uint8_t read_debounced_switch(uint8_t pin, volatile uint8_t *last_state)
 {
-   RCC->APB2ENR |= 1 << 14;                         // enable SYSCFG clock
+    uint8_t current_state = (GPIOA->IDR & (1 << pin)) ? 1 : 0;
 
-   SYSCFG->EXTICR[(13 / 4)] |= 2 << (4 * (13 % 4)); // set EXTI13 to be connected to PC13
-   EXTI->IMR |= 1 << 13;                            // unmask EXTI13
-   EXTI->FTSR |= 1 << 13;                           // trigger on falling edge for EXTI13
-   NVIC_EnableIRQ(EXTI15_10_IRQn);                  // enable EXTI15_10 interrupt in NVIC
+    // check state change
+    if (current_state != *last_state)
+    {
+        delay_ms(DEBOUNCE_DELAY);
+        current_state = (GPIOA->IDR & (1 << pin)) ? 1 : 0;
 
-   SYSCFG->EXTICR[(8 / 4)] |= 2 << (4 * (8 % 4));   // set EXTI8 to be connected to PC8
-   EXTI->IMR |= 1 << 8;                             // unmask EXTI8
-   EXTI->FTSR |= 1 << 8;                            // trigger on falling edge for EXTI8
-   NVIC_EnableIRQ(EXTI9_5_IRQn);                    // enable EXTI9_5 interrupt in NVIC
-}
+        if (current_state != *last_state)
+        {
+            *last_state = current_state;
+            return (current_state == 1);
+        }
+    }
 
-void EXTI15_10_IRQHandler(void)
-{
-   if (EXTI->PR & (1 << 13))
-   {                                 // check if the interrupt is from EXTI13
-      EXTI->PR |= (1 << 13);          // write 1 to clear pending bit
-      GPIOA->BSRR = (1 << (5 + 16)); // turn on LED 
-      for(volatile int i = 0; i < 100000; i++);
-
-   }
-}
-
-void EXTI9_5_IRQHandler(void)
-{
-   if (EXTI->PR & (1 << 8))
-   {                        // check if the interrupt is from EXTI8
-      EXTI->PR |= (1 << 8);  // write 1 to clear pending bit
-      GPIOA->BSRR = 1 << 5; // turn off LED 
-      for(volatile int i = 0; i < 100000; i++);
-     
-   }
+    return 0;
 }
 
 int main(void)
 {
-   init_button();
-   init_led();
-   init_interrupt();
-   while (1)
-   {
-      GPIOA->ODR ^= 1 << 5;
-      for (volatile int i = 0; i < 100000; i++);
-   }
+    // init gpio
+    init_gpio();
+
+    // led off
+    GPIOB->BSRR = (1 << (LED_PIN + 16)); // led off
+
+    while (1)
+    {
+        // read switches
+        uint8_t sw1_pressed = read_debounced_switch(SW1_PIN, &last_sw1_state);
+        uint8_t sw2_pressed = read_debounced_switch(SW2_PIN, &last_sw2_state);
+
+        // led on if both pressed
+        if (sw1_pressed && sw2_pressed)
+        {
+            GPIOB->BSRR = (1 << LED_PIN); // led on
+        }
+        else
+        {
+            GPIOB->BSRR = (1 << (LED_PIN + 16)); // led off
+        }
+
+        // delay
+        delay_ms(10);
+    }
 }

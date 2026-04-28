@@ -1,13 +1,6 @@
 #include "stm32f4xx_hal.h"
 
-/*
- * Week 4 - Exercise 3
- * Smart traffic light:
- * - Green (PA7): 5 s
- * - Yellow (PA6): 2 s
- * - Red (PA5): 5 s
- * - Pedestrian button: PC13
- */
+
 
 enum
 {
@@ -24,7 +17,7 @@ volatile uint32_t global_seconds = 0;
 
 void set_lights(uint8_t state)
 {
-   /* Turn all off first. */
+   /* turn all off first. */
    GPIOA->BSRR = (1 << (5 + 16)) | (1 << (6 + 16)) | (1 << (7 + 16));
 
    if (state == STATE_GREEN)
@@ -60,7 +53,7 @@ void init_pedestrian_button_pc13(void)
    GPIOC->PUPDR &= ~(3 << (2 * 13));
 
    SYSCFG->EXTICR[3] &= ~(0xF << 4);
-   SYSCFG->EXTICR[3] |= (0x2 << 4); /* EXTI13 <- PC13 */
+   SYSCFG->EXTICR[3] |= (0x2 << 4); /* exti13 <- pc13 */
 
    EXTI->IMR |= (1 << 13);
    EXTI->FTSR |= (1 << 13);
@@ -74,7 +67,7 @@ void tim3_init_1s_interrupt(void)
    RCC->APB1ENR |= (1 << 1);
 
    TIM3->CR1 = 0;
-   TIM3->PSC = 16000 - 1; /* 1 kHz */
+   TIM3->PSC = 16000 - 1; /* 1 khz */
    TIM3->ARR = 1000 - 1;  /* 1 second */
    TIM3->CNT = 0;
    TIM3->DIER |= (1 << 0);
@@ -94,7 +87,7 @@ void EXTI15_10_IRQHandler(void)
 
       if (traffic_state == STATE_GREEN)
       {
-         /* Interrupt green immediately, then run yellow for safety. */
+         /* interrupt green immediately, then run yellow for safety. */
          traffic_state = STATE_YELLOW;
          state_elapsed_s = 0;
          state_duration_s = 2;
@@ -102,7 +95,7 @@ void EXTI15_10_IRQHandler(void)
       }
       else
       {
-         /* Remember the request, apply +3 s when entering next red state. */
+         /* remember the request, apply +3 s when entering next red state. */
          pedestrian_waiting = 1;
       }
    }

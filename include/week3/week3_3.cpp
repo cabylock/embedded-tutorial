@@ -1,129 +1,103 @@
 #include "stm32f4xx_hal.h"
 
-// Cấu hình SW1, SW2, SW3 trên PC0, PC1, PC2
-// LED 1, 2, 3 trên PB13, PB14, PB15
+// debounce timing
+#define DEBOUNCE_DELAY 50
 
-void delay_loop(uint32_t count)
+// pin definitions
+#define SW1_PIN 0 // pa0
+#define LED_PIN 0 // pb0
+
+// global variables
+volatile uint8_t last_sw1_state = 0;
+volatile uint8_t counter = 0;
+
+
+// init gpio
+void init_gpio(void)
 {
-   for (volatile uint32_t i = 0; i < count; i++)
-      ;
+    // enable clock for gpioa and gpiob
+    RCC->AHB1ENR |= (1 << 0) | (1 << 1); // gpioa and gpiob
+
+    //  sw1 (pa0)  input  pull-down
+    GPIOA->MODER &= ~(3 << (2 * SW1_PIN)); // clear mode bits
+    GPIOA->PUPDR &= ~(3 << (2 * SW1_PIN)); // clear pull-up/down
+    GPIOA->PUPDR |= (2 << (2 * SW1_PIN));  // set pull-down
+
+    //  led (pb0)  output
+    GPIOB->MODER &= ~(3 << (2 * LED_PIN));  // clear mode bits
+    GPIOB->MODER |= (1 << (2 * LED_PIN));   // set as output
+    GPIOB->OTYPER &= ~(1 << LED_PIN);       // push-pull output
+    GPIOB->OSPEEDR |= (3 << (2 * LED_PIN)); // high speed
 }
 
-void init_button(void)
+// simple delay function
+void delay_ms(uint32_t ms)
 {
-   RCC->AHB1ENR |= 1 << 2; // clock for GPIOC
-
-   // SW1 on PC0
-   GPIOC->MODER &= ~(3 << (2 * 0));
-   GPIOC->PUPDR &= ~(3 << (2 * 0));
-
-   // SW2 on PC1
-   GPIOC->MODER &= ~(3 << (2 * 1));
-   GPIOC->PUPDR &= ~(3 << (2 * 1));
-
-   // SW3 on PC2
-   GPIOC->MODER &= ~(3 << (2 * 2));
-   GPIOC->PUPDR &= ~(3 << (2 * 2));
+    for (volatile uint32_t i = 0; i < ms * 1000; i++)
+        ;
 }
 
-void init_led(void)
+// blink led specified number of times
+void blink_led(uint8_t times)
 {
-   RCC->AHB1ENR |= 1 << 1; // clock for GPIOB
+    for (uint8_t i = 0; i < times; i++)
+    {
+        // turn on led
+        GPIOB->BSRR = (1 << LED_PIN);
+        delay_ms(200); // led on for 200ms
 
-   // LED 1 on PB13
-   GPIOB->MODER &= ~(3 << (2 * 13));
-   GPIOB->MODER |= 1 << (2 * 13);
-
-   // LED 2 on PB14
-   GPIOB->MODER &= ~(3 << (2 * 14));
-   GPIOB->MODER |= 1 << (2 * 14);
-
-   // LED 3 on PB15
-   GPIOB->MODER &= ~(3 << (2 * 15));
-   GPIOB->MODER |= 1 << (2 * 15);
+        // turn off led
+        GPIOB->BSRR = (1 << (LED_PIN + 16));
+        delay_ms(200); // led off for 200ms
+    }
 }
 
-void init_interrupt(void)
+// debounce function for switches
+uint8_t read_debounced_switch(uint8_t pin, volatile uint8_t *last_state)
 {
-   RCC->APB2ENR |= 1 << 14;
+    uint8_t current_state = (GPIOA->IDR & (1 << pin)) ? 1 : 0;
 
-   // SW1 -> PC0 -> EXTI0
-   SYSCFG->EXTICR[0] &= ~(0 << (4 * 0));
-   SYSCFG->EXTICR[0] |= 2 << (4 * 0); // 2 means GPIOC
+    // check if state has changed
+    if (current_state != *last_state)
+    {
+        delay_ms(DEBOUNCE_DELAY);
+        current_state = (GPIOA->IDR & (1 << pin)) ? 1 : 0;
 
-   // SW2 -> PC1 -> EXTI1
-   SYSCFG->EXTICR[0] &= ~(0 << (4 * 1));
-   SYSCFG->EXTICR[0] |= 2 << (4 * 1);
+        if (current_state != *last_state)
+        {
+            *last_state = current_state;
+            return (current_state == 1);
+        }
+    }
 
-   // SW3 -> PC2 -> EXTI2
-   SYSCFG->EXTICR[0] &= ~(0 << (4 * 2));
-   SYSCFG->EXTICR[0] |= 2 << (4 * 2);
-
-   EXTI->IMR |= (1 << 0) | (1 << 1) | (1 << 2);
-   EXTI->FTSR |= (1 << 0) | (1 << 1) | (1 << 2);
-
-   // Thiết lập mức ưu tiên ngắt trong NVIC theo thứ tự: Mức ưu tiên của SW3 > Mức ưu tiên của SW2 > Mức ưu tiên của SW1
-   NVIC_SetPriority(EXTI2_IRQn, 0); // SW3 cao nhất
-   NVIC_SetPriority(EXTI1_IRQn, 1); // SW2
-   NVIC_SetPriority(EXTI0_IRQn, 2); // SW1 thấp nhất
-
-   NVIC_EnableIRQ(EXTI0_IRQn);
-   NVIC_EnableIRQ(EXTI1_IRQn);
-   NVIC_EnableIRQ(EXTI2_IRQn);
-}
-
-void EXTI0_IRQHandler(void)
-{
-   if (EXTI->PR & (1 << 0))
-   {
-      EXTI->PR = (1 << 0); // write 1 to clear pending bit
-      for (int i = 0; i < 2; i++)
-      {
-         GPIOB->ODR |= (1 << 13);
-         delay_loop(500000);
-         GPIOB->ODR &= ~(1 << 13);
-         delay_loop(500000);
-      }
-   }
-}
-
-void EXTI1_IRQHandler(void)
-{
-   if (EXTI->PR & (1 << 1))
-   {
-      EXTI->PR = (1 << 1);
-      for (int i = 0; i < 4; i++)
-      {
-         GPIOB->ODR |= (1 << 14);
-         delay_loop(500000);
-         GPIOB->ODR &= ~(1 << 14);
-         delay_loop(500000);
-      }
-   }
-}
-
-void EXTI2_IRQHandler(void)
-{
-   if (EXTI->PR & (1 << 2))
-   {
-      EXTI->PR = (1 << 2);
-      for (int i = 0; i < 6; i++)
-      {
-         GPIOB->ODR |= (1 << 15);
-         delay_loop(500000);
-         GPIOB->ODR &= ~(1 << 15);
-         delay_loop(500000);
-      }
-   }
+    return 0; 
 }
 
 int main(void)
 {
-   init_button();
-   init_led();
-   init_interrupt();
+    // initialize gpio
+    init_gpio();
 
-   while (1)
-   {
-   }
+    // initial state: led off
+    GPIOB->BSRR = (1 << (LED_PIN + 16)); // turn off led
+
+    while (1)
+    {
+        // check for switch press
+        if (read_debounced_switch(SW1_PIN, &last_sw1_state))
+        {
+            // increment counter (1-5, then wrap to 1)
+            counter++;
+            if (counter > 5)
+            {
+                counter = 1;
+            }
+
+            // blink led counter times
+            blink_led(counter);
+        }
+
+        // small delay to prevent excessive cpu usage
+        delay_ms(10);
+    }
 }

@@ -5,10 +5,10 @@ void init_pa5_tim2_ch1(void)
    RCC->AHB1ENR |= (1 << 0);
 
    GPIOA->MODER &= ~(3 << (2 * 5));
-   GPIOA->MODER |= (2 << (2 * 5)); /* Alternate function */
+   GPIOA->MODER |= (2 << (2 * 5)); /* alternate function */
 
    GPIOA->AFR[0] &= ~(0xF << (4 * 5));
-   GPIOA->AFR[0] |= (0x1 << (4 * 5)); /* AF1 = TIM2 */
+   GPIOA->AFR[0] |= (0x1 << (4 * 5)); /* af1 = tim2 */
 }
 
 void tim2_init_pwm_1khz(void)
@@ -16,13 +16,13 @@ void tim2_init_pwm_1khz(void)
    RCC->APB1ENR |= (1 << 0);
 
    TIM2->CR1 = 0;
-   TIM2->PSC = 16 - 1;   /* 16 MHz / 16 = 1 MHz */
-   TIM2->ARR = 1000 - 1; /* 1 MHz / 1000 = 1 kHz */
+   TIM2->PSC = 16 - 1;   /* 16 mhz / 16 = 1 mhz */
+   TIM2->ARR = 1000 - 1; /* 1 mhz / 1000 = 1 khz */
    TIM2->CCR1 = 0;
 
    TIM2->CCMR1 &= ~(3 << 0); 
    TIM2->CCMR1 &= ~(7 << 4);
-   TIM2->CCMR1 |= (6 << 4); /* PWM mode 1 */
+   TIM2->CCMR1 |= (6 << 4); /* pwm mode 1 */
    TIM2->CCMR1 |= (1 << 3);
 
    TIM2->CCER |= (1 << 0);

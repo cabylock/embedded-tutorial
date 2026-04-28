@@ -1,11 +1,6 @@
 #include "stm32f4xx_hal.h"
 
-/*
- * Week 4 - Exercise 6
- * - Continuous distance update using Input Capture (TIM2_CH1, PA0)
- * - PWM LED brightness control (TIM3_CH1, PA6)
- *   Closer object -> brighter LED
- */
+
 
 volatile uint8_t waiting_falling_edge = 0;
 volatile uint8_t measurement_ready = 0;
@@ -18,13 +13,13 @@ void init_hcsr04_pins(void)
 {
    RCC->AHB1ENR |= (1 << 0) | (1 << 1);
 
-   /* PA0 -> TIM2_CH1 (Echo) */
+   /* pa0 -> tim2_ch1 (echo) */
    GPIOA->MODER &= ~(3 << (2 * 0));
    GPIOA->MODER |= (2 << (2 * 0));
    GPIOA->AFR[0] &= ~(0xF << (4 * 0));
    GPIOA->AFR[0] |= (0x1 << (4 * 0));
 
-   /* PB6 -> Trigger output */
+   /* pb6 -> trigger output */
    GPIOB->MODER &= ~(3 << (2 * 6));
    GPIOB->MODER |= (1 << (2 * 6));
    GPIOB->BSRR = (1 << (6 + 16));
@@ -34,7 +29,7 @@ void init_pwm_led_pa6(void)
 {
    RCC->AHB1ENR |= (1 << 0);
 
-   /* PA6 -> TIM3_CH1 (AF2) */
+   /* pa6 -> tim3_ch1 (af2) */
    GPIOA->MODER &= ~(3 << (2 * 6));
    GPIOA->MODER |= (2 << (2 * 6));
    GPIOA->AFR[0] &= ~(0xF << (4 * 6));
@@ -46,14 +41,14 @@ void tim2_init_input_capture(void)
    RCC->APB1ENR |= (1 << 0);
 
    TIM2->CR1 = 0;
-   TIM2->PSC = 16 - 1; /* 1 MHz -> 1 us resolution */
+   TIM2->PSC = 16 - 1; /* 1 mhz -> 1 us resolution */
    TIM2->ARR = 0xFFFFFFFF;
    TIM2->CNT = 0;
 
    TIM2->CCMR1 &= ~((3 << 0));
-   TIM2->CCMR1 |= (1 << 0); /* CC1 from TI1 */
+   TIM2->CCMR1 |= (1 << 0); /* cc1 from ti1 */
 
-   TIM2->CCER &= ~((1 << 1) | (1 << 3)); /* Rising edge */
+   TIM2->CCER &= ~((1 << 1) | (1 << 3)); /* rising edge */
    TIM2->CCER |= (1 << 0);
 
    TIM2->DIER |= (1 << 1);
@@ -70,12 +65,12 @@ void tim3_init_pwm_1khz(void)
    RCC->APB1ENR |= (1 << 1);
 
    TIM3->CR1 = 0;
-   TIM3->PSC = 16 - 1;   /* 1 MHz */
-   TIM3->ARR = 1000 - 1; /* 1 kHz */
+   TIM3->PSC = 16 - 1;   /* 1 mhz */
+   TIM3->ARR = 1000 - 1; /* 1 khz */
    TIM3->CCR1 = 0;
 
    TIM3->CCMR1 &= ~((3 << 0) | (7 << 4));
-   TIM3->CCMR1 |= (6 << 4); /* PWM mode 1 */
+   TIM3->CCMR1 |= (6 << 4); /* pwm mode 1 */
    TIM3->CCMR1 |= (1 << 3);
 
    TIM3->CCER |= (1 << 0);
@@ -138,7 +133,7 @@ void TIM2_IRQHandler(void)
       {
          t_rise = captured;
          waiting_falling_edge = 1;
-         TIM2->CCER |= (1 << 1); /* Falling edge next */
+         TIM2->CCER |= (1 << 1); /* falling edge next */
       }
       else
       {
@@ -157,7 +152,7 @@ void TIM2_IRQHandler(void)
          measurement_ready = 1;
 
          waiting_falling_edge = 0;
-         TIM2->CCER &= ~(1 << 1); /* Back to rising edge */
+         TIM2->CCER &= ~(1 << 1); /* back to rising edge */
       }
    }
 }

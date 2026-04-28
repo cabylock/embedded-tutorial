@@ -1,11 +1,5 @@
 #include "stm32f4xx_hal.h"
 
-/*
- * Week 4 - Exercise 1
- * TIM2 polling mode (UIF flag):
- * - Upcounter mode: LED PA5 toggles every 1s
- * - Downcounter mode: LED PA5 toggles every 2s
- */
 
 void init_led_pa5(void)
 {
@@ -25,7 +19,7 @@ void tim2_config_period_ms(uint32_t period_ms, uint8_t downcounter)
    RCC->APB1ENR |= (1 << 0);
 
    TIM2->CR1 = 0;
-   TIM2->PSC = 16000 - 1; /* 16 MHz / 16000 = 1 kHz -> 1 ms/tick */
+   TIM2->PSC = 16000 - 1; /* 16 mhz / 16000 = 1 khz -> 1 ms/tick */
    TIM2->ARR = period_ms - 1;
 
    if (downcounter)

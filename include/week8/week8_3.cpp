@@ -17,35 +17,35 @@ void USART2_SendString(const char *str)
 
 void USART2_Init(void)
 {
-   RCC->AHB1ENR |= (1 << 0);  // Enable GPIOA clock
-   RCC->APB1ENR |= (1 << 17); // Enable USART2 clock
+   RCC->AHB1ENR |= (1 << 0);  // enable gpioa clock
+   RCC->APB1ENR |= (1 << 17); // enable usart2 clock
 
-   GPIOA->MODER &= ~(3 << (2 * 2)); // Clear mode PA2
-   GPIOA->MODER |= (2 << (2 * 2));  // PA2 alternate function Mode
+   GPIOA->MODER &= ~(3 << (2 * 2)); // clear mode pa2
+   GPIOA->MODER |= (2 << (2 * 2));  // pa2 alternate function mode
 
-   GPIOA->AFR[0] &= ~(0xF << (4 * 2)); // Clear alternate function PA2
-   GPIOA->AFR[0] |= (7 << (4 * 2));    // AF7 for USART2 TX on PA2
+   GPIOA->AFR[0] &= ~(0xF << (4 * 2)); // clear alternate function pa2
+   GPIOA->AFR[0] |= (7 << (4 * 2));    // af7 for usart2 tx on pa2
 
    USART2->BRR = (104 << 4) | 3; // baud rate 9600 bps
 
-   USART2->CR1 = (1 << 3) | (1 << 2) | (1 << 13); // Enable TX, RX, and USART
+   USART2->CR1 = (1 << 3) | (1 << 2) | (1 << 13); // enable tx, rx, and usart
 }
 
 void Button_Init(void)
 {
-   RCC->AHB1ENR |= (1 << 2); // Enable clock for GPIOC
+   RCC->AHB1ENR |= (1 << 2); // enable clock for gpioc
 
-   GPIOC->MODER &= ~(3 << (2 * 1)); // Set PC1 as input mode (00)
-   GPIOC->PUPDR &= ~(3 << (2 * 1)); // Clear pull-up/pull-down bits
-   GPIOC->PUPDR |= (1 << (2 * 1));  // Set pull-up for PC1 (helps stabilize reading)
+   GPIOC->MODER &= ~(3 << (2 * 1)); // set pc1 as input mode (00)
+   GPIOC->PUPDR &= ~(3 << (2 * 1)); // clear pull-up/pull-down bits
+   GPIOC->PUPDR |= (1 << (2 * 1));  // set pull-up for pc1 (helps stabilize reading)
 }
 
 void LED_Init(void)
 {
-   RCC->AHB1ENR |= (1 << 1); // Enable clock for GPIOB
+   RCC->AHB1ENR |= (1 << 1); // enable clock for gpiob
 
    GPIOB->MODER &= ~(3 << (2 * 0));
-   GPIOB->MODER |= (1 << (2 * 0)); // Set PB0 as output mode (01)
+   GPIOB->MODER |= (1 << (2 * 0)); // set pb0 as output mode (01)
 }
 
 int main(void)
@@ -59,7 +59,7 @@ int main(void)
    uint32_t delay_counter = 0;
 
    USART2_SendString("MODE = 0: Den tat\r\n");
-   GPIOB->ODR &= ~(1 << 0); // Turn off LED
+   GPIOB->ODR &= ~(1 << 0); // turn off led
 
    while (1)
    {
@@ -68,7 +68,7 @@ int main(void)
       if (btn_prev == 1 && btn_curr == 0)
       {
          for (volatile uint32_t i = 0; i < 50000; i++)
-            ; // Delay for debounce
+            ; // delay for debounce
 
          if ((GPIOC->IDR & (1 << 1)) == 0)
          {
@@ -82,11 +82,11 @@ int main(void)
             {
             case 0:
                USART2_SendString("MODE = 0: Den tat\r\n");
-               GPIOB->ODR &= ~(1 << 0); // Off
+               GPIOB->ODR &= ~(1 << 0); // off
                break;
             case 1:
                USART2_SendString("MODE = 1: Den bat\r\n");
-               GPIOB->ODR |= (1 << 0); // On
+               GPIOB->ODR |= (1 << 0); // on
                break;
             case 2:
                USART2_SendString("MODE = 2: Den nhap nhay cham\r\n");
