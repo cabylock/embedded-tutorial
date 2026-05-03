@@ -1,0 +1,177 @@
+{
+  "id": "TIMx_SR (Status Register)",
+  "title": "Status Register.",
+  "offset": "0x10",
+  "resetValue": "N/A",
+  "groupLabel": "TIMx (Basic/General Purpose Timers)",
+  "rows": [
+    {
+      "bits": "15:5",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "4",
+      "name": "CC4IF (Capture/Compare 4 Flag)",
+      "access": "R/W0",
+      "desc": "Cờ báo ngắt Capture/Compare Kênh 4. Lên 1 khi có sự kiện Compare Match hoặc Capture."
+    },
+    {
+      "bits": "3",
+      "name": "CC3IF (Capture/Compare 3 Flag)",
+      "access": "R/W0",
+      "desc": "Cờ báo ngắt Capture/Compare Kênh 3. Lên 1 khi có sự kiện Compare Match hoặc Capture."
+    },
+    {
+      "bits": "2",
+      "name": "CC2IF (Capture/Compare 2 Flag)",
+      "access": "R/W0",
+      "desc": "Cờ báo ngắt Capture/Compare Kênh 2. Lên 1 khi có sự kiện Compare Match hoặc Capture."
+    },
+    {
+      "bits": "1",
+      "name": "CC1IF (Capture/Compare 1 Flag)",
+      "access": "R/W0",
+      "desc": "Cờ báo ngắt Capture/Compare Kênh 1. Lên 1 khi có sự kiện Compare Match hoặc Capture."
+    },
+    {
+      "bits": "0",
+      "name": "UIF (Update Interrupt Flag)",
+      "access": "R/W0",
+      "desc": "Cờ báo hiệu đếm tràn. Khi Timer tràn, cờ này tự bật lên 1. Phải ghi số 0 vào cờ này để xóa nó (thường làm trong hàm ngắt)."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "0",
+      "name": "UIF (Update Interrupt Flag)",
+      "access": "R/W0",
+      "desc": "Cờ báo hiệu đếm tràn. Khi Timer tràn, cờ này tự bật lên 1. Phải ghi số 0 vào cờ này để xóa nó (thường làm trong hàm ngắt).",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1",
+      "name": "CC1IF (Capture/Compare 1 Flag)",
+      "access": "R/W0",
+      "desc": "Cờ báo ngắt Capture/Compare Kênh 1. Lên 1 khi có sự kiện Compare Match hoặc Capture.",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "2",
+      "name": "CC2IF (Capture/Compare 2 Flag)",
+      "access": "R/W0",
+      "desc": "Cờ báo ngắt Capture/Compare Kênh 2. Lên 1 khi có sự kiện Compare Match hoặc Capture.",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3",
+      "name": "CC3IF (Capture/Compare 3 Flag)",
+      "access": "R/W0",
+      "desc": "Cờ báo ngắt Capture/Compare Kênh 3. Lên 1 khi có sự kiện Compare Match hoặc Capture.",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "4",
+      "name": "CC4IF (Capture/Compare 4 Flag)",
+      "access": "R/W0",
+      "desc": "Cờ báo ngắt Capture/Compare Kênh 4. Lên 1 khi có sự kiện Compare Match hoặc Capture.",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    }
+  ],
+  "maxBit": 15,
+  "hasBits": true
+}

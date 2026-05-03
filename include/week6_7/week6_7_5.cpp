@@ -8,7 +8,7 @@ void init_pa5_tim2_ch1(void)
    GPIOA->MODER |= (2 << (2 * 5)); /* alternate function */
 
    GPIOA->AFR[0] &= ~(0xF << (4 * 5));
-   GPIOA->AFR[0] |= (0x1 << (4 * 5)); /* af1 = tim2 */
+   GPIOA->AFR[0] |= (0x1 << (4 * 5)); /* af1 = tim2 for pa5 */
 }
 
 void tim2_init_pwm_1khz(void)

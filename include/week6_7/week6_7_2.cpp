@@ -33,13 +33,13 @@ void delay_ms(uint32_t ms)
 
 void tim3_init_1000ms(void)
 {
-   RCC->APB1ENR |= (1 << 1);
+   RCC->APB1ENR |= (1 << 1); // enable clock for timer3
 
    TIM3->CR1 = 0;
    TIM3->PSC = 16000 - 1; /* 1 khz */
    TIM3->ARR = 1000 - 1;  /* 1000 ms update */
    TIM3->CNT = 0;
-   TIM3->DIER |= (1 << 0);
+   TIM3->DIER |= (1 << 0); // enable update interrupt
    TIM3->EGR = (1 << 0);
    TIM3->SR &= ~(1 << 0);
 

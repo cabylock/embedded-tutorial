@@ -1,0 +1,365 @@
+{
+  "id": "RCC_APB2ENR (APB2 Peripheral Clock Enable Register)",
+  "title": "APB2 Peripheral Clock Enable Register.",
+  "offset": "0x44",
+  "resetValue": "0x0000 0000",
+  "groupLabel": "RCC (Reset and Clock Control)",
+  "rows": [
+    {
+      "bits": "31:19",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "18",
+      "name": "TIM11EN (TIM11 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ TIM11. (Phải bật thì bộ TIM11 mới hoạt động được)"
+    },
+    {
+      "bits": "17",
+      "name": "TIM10EN (TIM10 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ TIM10. (Phải bật thì bộ TIM10 mới hoạt động được)"
+    },
+    {
+      "bits": "16",
+      "name": "TIM9EN (TIM9 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ TIM9. (Phải bật thì bộ TIM9 mới hoạt động được)"
+    },
+    {
+      "bits": "15",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "14",
+      "name": "SYSCFGEN (SYSCFG Enable)",
+      "access": "R/W",
+      "desc": "System configuration controller clock enable"
+    },
+    {
+      "bits": "13",
+      "name": "SPI4EN (SPI4 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ SPI4. (Phải bật thì bộ SPI4 mới hoạt động được)"
+    },
+    {
+      "bits": "12",
+      "name": "SPI1EN (SPI1 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ SPI1. (Phải bật thì bộ SPI1 mới hoạt động được)"
+    },
+    {
+      "bits": "11",
+      "name": "SDIOEN (SDIO Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ SDIO. (Phải bật thì bộ SDIO mới hoạt động được)"
+    },
+    {
+      "bits": "10:9",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "8",
+      "name": "ADC1EN (ADC1 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ ADC1. (Phải bật thì bộ ADC1 mới hoạt động được)"
+    },
+    {
+      "bits": "7:6",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "5",
+      "name": "USART6EN (USART6 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ USART6. (Phải bật thì bộ USART6 mới hoạt động được)"
+    },
+    {
+      "bits": "4",
+      "name": "USART1EN (USART1 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ USART1. (Phải bật thì bộ USART1 mới hoạt động được)"
+    },
+    {
+      "bits": "3:1",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "0",
+      "name": "TIM1EN (TIM1 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ TIM1. (Phải bật thì bộ TIM1 mới hoạt động được)"
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "0",
+      "name": "TIM1EN (TIM1 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ TIM1. (Phải bật thì bộ TIM1 mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "3:1",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "3:1",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3:1",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "4",
+      "name": "USART1EN (USART1 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ USART1. (Phải bật thì bộ USART1 mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "5",
+      "name": "USART6EN (USART6 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ USART6. (Phải bật thì bộ USART6 mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "7:6",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7:6",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "8",
+      "name": "ADC1EN (ADC1 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ ADC1. (Phải bật thì bộ ADC1 mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "10:9",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "10:9",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "11",
+      "name": "SDIOEN (SDIO Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ SDIO. (Phải bật thì bộ SDIO mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "12",
+      "name": "SPI1EN (SPI1 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ SPI1. (Phải bật thì bộ SPI1 mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "13",
+      "name": "SPI4EN (SPI4 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ SPI4. (Phải bật thì bộ SPI4 mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "14",
+      "name": "S14SCFGEN (S14SCFG Enable)",
+      "access": "R/W",
+      "desc": "System configuration controller clock enable",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "16",
+      "name": "TIM9EN (TIM9 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ TIM9. (Phải bật thì bộ TIM9 mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "17",
+      "name": "TIM10EN (TIM10 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ TIM10. (Phải bật thì bộ TIM10 mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "18",
+      "name": "TIM11EN (TIM11 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ TIM11. (Phải bật thì bộ TIM11 mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 23,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 24,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 25,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 26,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 27,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 28,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 29,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 30,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 31,
+      "rangeLabel": "31:19",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    }
+  ],
+  "maxBit": 31,
+  "hasBits": true
+}

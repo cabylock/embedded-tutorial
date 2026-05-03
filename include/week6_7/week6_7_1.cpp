@@ -1,6 +1,5 @@
 #include "stm32f4xx_hal.h"
 
-
 void init_led_pa5(void)
 {
    RCC->AHB1ENR |= (1 << 0);
@@ -16,7 +15,7 @@ void toggle_led_pa5(void)
 
 void tim2_config_period_ms(uint32_t period_ms, uint8_t downcounter)
 {
-   RCC->APB1ENR |= (1 << 0);
+   RCC->APB1ENR |= (1 << 0); // enable clock for timer2
 
    TIM2->CR1 = 0;
    TIM2->PSC = 16000 - 1; /* 16 mhz / 16000 = 1 khz -> 1 ms/tick */

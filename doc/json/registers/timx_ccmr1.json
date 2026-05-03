@@ -1,0 +1,177 @@
+{
+  "id": "TIMx_CCMR1 (Capture/Compare Mode Register 1)",
+  "title": "Capture/Compare Mode Register 1. Thanh ghi trung tâm chuyên dùng để setup các chức năng về PWM (tạo xung) hoặc Input Capture (đo xung) cho Kênh 1 và Kênh 2. LƯU Ý: Một nửa bit là cho Kênh 1, nửa kia cho Kênh 2. Tác dụng của các bit này sẽ thay đổi hoàn toàn tùy thuộc vào việc bạn đang cấu hình kênh đó để Xuất (Output) hay Nhận (Input).",
+  "offset": "0x18",
+  "resetValue": "0x0000 0000",
+  "groupLabel": "TIM2 to TIM5 (General-Purpose Timers)",
+  "rows": [
+    {
+      "bits": "15:12",
+      "name": "OC2CE (Output Compare 2 Clear Enable) & OC2M (Output Compare 2 Mode) <br> / IC2F (Input Capture 2 Filter)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 2 là Ngõ Ra (Output)]**<br>- **Bit 15 (OC2CE):** Cho phép ép tắt PWM ngay lập tức khi có tín hiệu lỗi ngoài.<br>- **Bits 14:12 (OC2M - Chọn chế độ Output):** <br>👉 Chọn `110` để chạy **PWM Mode 1** (chế độ PWM thông dụng nhất hiện nay).<br>👉 Chọn `011` để tạo chế độ Toggle (Đảo trạng thái chân).<br><br>**[Nếu Kênh 2 là Ngõ Vào (Input)]**<br>- **Bits 15:12 (IC2F - Bộ lọc nhiễu):** Chống nhiễu cho tín hiệu vào. Cài số càng lớn, khả năng lọc nhiễu càng tốt nhưng sẽ phản hồi chậm hơn một xíu."
+    },
+    {
+      "bits": "11:10",
+      "name": "OC2PE (Output Compare 2 Preload Enable) & OC2FE (Output Compare 2 Fast Enable) <br> / IC2PSC (Input Capture 2 Prescaler)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 2 là Ngõ Ra (Output)]**<br>- **Bit 11 (OC2PE - Bật bộ đệm):** Nên bật (1) khi làm PWM! Giúp thay đổi độ rộng xung (duty cycle) mượt mà, tránh bị giật xung.<br>- **Bit 10 (OC2FE):** Bật tính năng phản hồi nhanh.<br><br>**[Nếu Kênh 2 là Ngõ Vào (Input)]**<br>- **Bits 11:10 (IC2PSC - Chia tần số ngõ vào):** Giảm số lần bắt xung (Ví dụ: đếm 2, 4 hoặc 8 sườn xung mới ghi nhận 1 lần chụp)."
+    },
+    {
+      "bits": "9:8",
+      "name": "CC2S (Capture/Compare 2 Selection)",
+      "access": "R/W",
+      "desc": "**Chọn Hướng Cho Kênh 2 (CC2S):**<br>Quyết định Kênh 2 là ngõ ra (để tạo PWM) hay ngõ vào (để đo xung).<br>- `00`: Cấu hình Kênh 2 làm **Ngõ ra (Output)**.<br>- `01`: Cấu hình Kênh 2 làm **Ngõ vào (Input)** và đọc tín hiệu từ chân TI2.<br>- `10` hoặc `11`: Làm Input nhưng đọc chéo từ nguồn khác."
+    },
+    {
+      "bits": "7:4",
+      "name": "OC1CE (Output Compare 1 Clear Enable) & OC1M (Output Compare 1 Mode) <br> / IC1F (Input Capture 1 Filter)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 1 là Ngõ Ra (Output)]**<br>- **Bit 7 (OC1CE):** Cho phép ép tắt PWM ngay lập tức khi có tín hiệu lỗi ngoài.<br>- **Bits 6:4 (OC1M - Chọn chế độ Output):** <br>👉 Chọn `110` để chạy **PWM Mode 1** (chế độ PWM thông dụng nhất hiện nay).<br>👉 Chọn `011` để tạo chế độ Toggle (Đảo trạng thái chân).<br><br>**[Nếu Kênh 1 là Ngõ Vào (Input)]**<br>- **Bits 7:4 (IC1F - Bộ lọc nhiễu):** Chống nhiễu cho tín hiệu vào. Cài số càng lớn, khả năng lọc nhiễu càng tốt nhưng sẽ phản hồi chậm hơn một xíu."
+    },
+    {
+      "bits": "3:2",
+      "name": "OC1PE (Output Compare 1 Preload Enable) & OC1FE (Output Compare 1 Fast Enable) <br> / IC1PSC (Input Capture 1 Prescaler)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 1 là Ngõ Ra (Output)]**<br>- **Bit 3 (OC1PE - Bật bộ đệm):** Nên bật (1) khi làm PWM! Giúp thay đổi độ rộng xung (duty cycle) mượt mà, tránh bị giật xung.<br>- **Bit 2 (OC1FE):** Bật tính năng phản hồi nhanh.<br><br>**[Nếu Kênh 1 là Ngõ Vào (Input)]**<br>- **Bits 3:2 (IC1PSC - Chia tần số ngõ vào):** Giảm số lần bắt xung (Ví dụ: đếm 2, 4 hoặc 8 sườn xung mới ghi nhận 1 lần chụp)."
+    },
+    {
+      "bits": "1:0",
+      "name": "CC1S (Capture/Compare 1 Selection)",
+      "access": "R/W",
+      "desc": "**Chọn Hướng Cho Kênh 1 (CC1S):**<br>Quyết định Kênh 1 là ngõ ra (để tạo PWM) hay ngõ vào (để đo xung).<br>- `00`: Cấu hình Kênh 1 làm **Ngõ ra (Output)**.<br>- `01`: Cấu hình Kênh 1 làm **Ngõ vào (Input)** và đọc tín hiệu từ chân TI1.<br>- `10` hoặc `11`: Làm Input nhưng đọc chéo từ nguồn khác."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "1:0",
+      "name": "CC1S (Capture/Compare 1 Selection)",
+      "access": "R/W",
+      "desc": "**Chọn Hướng Cho Kênh 1 (CC1S):**<br>Quyết định Kênh 1 là ngõ ra (để tạo PWM) hay ngõ vào (để đo xung).<br>- `00`: Cấu hình Kênh 1 làm **Ngõ ra (Output)**.<br>- `01`: Cấu hình Kênh 1 làm **Ngõ vào (Input)** và đọc tín hiệu từ chân TI1.<br>- `10` hoặc `11`: Làm Input nhưng đọc chéo từ nguồn khác.",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1:0",
+      "name": "CC1S (Capture/Compare 1 Selection)",
+      "access": "R/W",
+      "desc": "**Chọn Hướng Cho Kênh 1 (CC1S):**<br>Quyết định Kênh 1 là ngõ ra (để tạo PWM) hay ngõ vào (để đo xung).<br>- `00`: Cấu hình Kênh 1 làm **Ngõ ra (Output)**.<br>- `01`: Cấu hình Kênh 1 làm **Ngõ vào (Input)** và đọc tín hiệu từ chân TI1.<br>- `10` hoặc `11`: Làm Input nhưng đọc chéo từ nguồn khác.",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "3:2",
+      "name": "OC1PE (Output Compare 1 Preload Enable) & OC1FE (Output Compare 1 Fast Enable)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 1 là Ngõ Ra (Output)]**<br>- **Bit 3 (OC1PE - Bật bộ đệm):** Nên bật (1) khi làm PWM! Giúp thay đổi độ rộng xung (duty cycle) mượt mà, tránh bị giật xung.<br>- **Bit 2 (OC1FE):** Bật tính năng phản hồi nhanh.<br><br>**[Nếu Kênh 1 là Ngõ Vào (Input)]**<br>- **Bits 3:2 (IC1PSC - Chia tần số ngõ vào):** Giảm số lần bắt xung (Ví dụ: đếm 2, 4 hoặc 8 sườn xung mới ghi nhận 1 lần chụp).",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3:2",
+      "name": "OC1PE (Output Compare 1 Preload Enable) & OC1FE (Output Compare 1 Fast Enable)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 1 là Ngõ Ra (Output)]**<br>- **Bit 3 (OC1PE - Bật bộ đệm):** Nên bật (1) khi làm PWM! Giúp thay đổi độ rộng xung (duty cycle) mượt mà, tránh bị giật xung.<br>- **Bit 2 (OC1FE):** Bật tính năng phản hồi nhanh.<br><br>**[Nếu Kênh 1 là Ngõ Vào (Input)]**<br>- **Bits 3:2 (IC1PSC - Chia tần số ngõ vào):** Giảm số lần bắt xung (Ví dụ: đếm 2, 4 hoặc 8 sườn xung mới ghi nhận 1 lần chụp).",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "7:4",
+      "name": "OC1CE (Output Compare 1 Clear Enable) & OC1M (Output Compare 1 Mode)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 1 là Ngõ Ra (Output)]**<br>- **Bit 7 (OC1CE):** Cho phép ép tắt PWM ngay lập tức khi có tín hiệu lỗi ngoài.<br>- **Bits 6:4 (OC1M - Chọn chế độ Output):** <br>👉 Chọn `110` để chạy **PWM Mode 1** (chế độ PWM thông dụng nhất hiện nay).<br>👉 Chọn `011` để tạo chế độ Toggle (Đảo trạng thái chân).<br><br>**[Nếu Kênh 1 là Ngõ Vào (Input)]**<br>- **Bits 7:4 (IC1F - Bộ lọc nhiễu):** Chống nhiễu cho tín hiệu vào. Cài số càng lớn, khả năng lọc nhiễu càng tốt nhưng sẽ phản hồi chậm hơn một xíu.",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "7:4",
+      "name": "OC1CE (Output Compare 1 Clear Enable) & OC1M (Output Compare 1 Mode)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 1 là Ngõ Ra (Output)]**<br>- **Bit 7 (OC1CE):** Cho phép ép tắt PWM ngay lập tức khi có tín hiệu lỗi ngoài.<br>- **Bits 6:4 (OC1M - Chọn chế độ Output):** <br>👉 Chọn `110` để chạy **PWM Mode 1** (chế độ PWM thông dụng nhất hiện nay).<br>👉 Chọn `011` để tạo chế độ Toggle (Đảo trạng thái chân).<br><br>**[Nếu Kênh 1 là Ngõ Vào (Input)]**<br>- **Bits 7:4 (IC1F - Bộ lọc nhiễu):** Chống nhiễu cho tín hiệu vào. Cài số càng lớn, khả năng lọc nhiễu càng tốt nhưng sẽ phản hồi chậm hơn một xíu.",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "7:4",
+      "name": "OC1CE (Output Compare 1 Clear Enable) & OC1M (Output Compare 1 Mode)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 1 là Ngõ Ra (Output)]**<br>- **Bit 7 (OC1CE):** Cho phép ép tắt PWM ngay lập tức khi có tín hiệu lỗi ngoài.<br>- **Bits 6:4 (OC1M - Chọn chế độ Output):** <br>👉 Chọn `110` để chạy **PWM Mode 1** (chế độ PWM thông dụng nhất hiện nay).<br>👉 Chọn `011` để tạo chế độ Toggle (Đảo trạng thái chân).<br><br>**[Nếu Kênh 1 là Ngõ Vào (Input)]**<br>- **Bits 7:4 (IC1F - Bộ lọc nhiễu):** Chống nhiễu cho tín hiệu vào. Cài số càng lớn, khả năng lọc nhiễu càng tốt nhưng sẽ phản hồi chậm hơn một xíu.",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7:4",
+      "name": "OC1CE (Output Compare 1 Clear Enable) & OC1M (Output Compare 1 Mode)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 1 là Ngõ Ra (Output)]**<br>- **Bit 7 (OC1CE):** Cho phép ép tắt PWM ngay lập tức khi có tín hiệu lỗi ngoài.<br>- **Bits 6:4 (OC1M - Chọn chế độ Output):** <br>👉 Chọn `110` để chạy **PWM Mode 1** (chế độ PWM thông dụng nhất hiện nay).<br>👉 Chọn `011` để tạo chế độ Toggle (Đảo trạng thái chân).<br><br>**[Nếu Kênh 1 là Ngõ Vào (Input)]**<br>- **Bits 7:4 (IC1F - Bộ lọc nhiễu):** Chống nhiễu cho tín hiệu vào. Cài số càng lớn, khả năng lọc nhiễu càng tốt nhưng sẽ phản hồi chậm hơn một xíu.",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "9:8",
+      "name": "CC2S (Capture/Compare 2 Selection)",
+      "access": "R/W",
+      "desc": "**Chọn Hướng Cho Kênh 2 (CC2S):**<br>Quyết định Kênh 2 là ngõ ra (để tạo PWM) hay ngõ vào (để đo xung).<br>- `00`: Cấu hình Kênh 2 làm **Ngõ ra (Output)**.<br>- `01`: Cấu hình Kênh 2 làm **Ngõ vào (Input)** và đọc tín hiệu từ chân TI2.<br>- `10` hoặc `11`: Làm Input nhưng đọc chéo từ nguồn khác.",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "9:8",
+      "name": "CC2S (Capture/Compare 2 Selection)",
+      "access": "R/W",
+      "desc": "**Chọn Hướng Cho Kênh 2 (CC2S):**<br>Quyết định Kênh 2 là ngõ ra (để tạo PWM) hay ngõ vào (để đo xung).<br>- `00`: Cấu hình Kênh 2 làm **Ngõ ra (Output)**.<br>- `01`: Cấu hình Kênh 2 làm **Ngõ vào (Input)** và đọc tín hiệu từ chân TI2.<br>- `10` hoặc `11`: Làm Input nhưng đọc chéo từ nguồn khác.",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "11:10",
+      "name": "OC2PE (Output Compare 2 Preload Enable) & OC2FE (Output Compare 2 Fast Enable)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 2 là Ngõ Ra (Output)]**<br>- **Bit 11 (OC2PE - Bật bộ đệm):** Nên bật (1) khi làm PWM! Giúp thay đổi độ rộng xung (duty cycle) mượt mà, tránh bị giật xung.<br>- **Bit 10 (OC2FE):** Bật tính năng phản hồi nhanh.<br><br>**[Nếu Kênh 2 là Ngõ Vào (Input)]**<br>- **Bits 11:10 (IC2PSC - Chia tần số ngõ vào):** Giảm số lần bắt xung (Ví dụ: đếm 2, 4 hoặc 8 sườn xung mới ghi nhận 1 lần chụp).",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "11:10",
+      "name": "OC2PE (Output Compare 2 Preload Enable) & OC2FE (Output Compare 2 Fast Enable)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 2 là Ngõ Ra (Output)]**<br>- **Bit 11 (OC2PE - Bật bộ đệm):** Nên bật (1) khi làm PWM! Giúp thay đổi độ rộng xung (duty cycle) mượt mà, tránh bị giật xung.<br>- **Bit 10 (OC2FE):** Bật tính năng phản hồi nhanh.<br><br>**[Nếu Kênh 2 là Ngõ Vào (Input)]**<br>- **Bits 11:10 (IC2PSC - Chia tần số ngõ vào):** Giảm số lần bắt xung (Ví dụ: đếm 2, 4 hoặc 8 sườn xung mới ghi nhận 1 lần chụp).",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "15:12",
+      "name": "OC2CE (Output Compare 2 Clear Enable) & OC2M (Output Compare 2 Mode)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 2 là Ngõ Ra (Output)]**<br>- **Bit 15 (OC2CE):** Cho phép ép tắt PWM ngay lập tức khi có tín hiệu lỗi ngoài.<br>- **Bits 14:12 (OC2M - Chọn chế độ Output):** <br>👉 Chọn `110` để chạy **PWM Mode 1** (chế độ PWM thông dụng nhất hiện nay).<br>👉 Chọn `011` để tạo chế độ Toggle (Đảo trạng thái chân).<br><br>**[Nếu Kênh 2 là Ngõ Vào (Input)]**<br>- **Bits 15:12 (IC2F - Bộ lọc nhiễu):** Chống nhiễu cho tín hiệu vào. Cài số càng lớn, khả năng lọc nhiễu càng tốt nhưng sẽ phản hồi chậm hơn một xíu.",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "15:12",
+      "name": "OC2CE (Output Compare 2 Clear Enable) & OC2M (Output Compare 2 Mode)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 2 là Ngõ Ra (Output)]**<br>- **Bit 15 (OC2CE):** Cho phép ép tắt PWM ngay lập tức khi có tín hiệu lỗi ngoài.<br>- **Bits 14:12 (OC2M - Chọn chế độ Output):** <br>👉 Chọn `110` để chạy **PWM Mode 1** (chế độ PWM thông dụng nhất hiện nay).<br>👉 Chọn `011` để tạo chế độ Toggle (Đảo trạng thái chân).<br><br>**[Nếu Kênh 2 là Ngõ Vào (Input)]**<br>- **Bits 15:12 (IC2F - Bộ lọc nhiễu):** Chống nhiễu cho tín hiệu vào. Cài số càng lớn, khả năng lọc nhiễu càng tốt nhưng sẽ phản hồi chậm hơn một xíu.",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:12",
+      "name": "OC2CE (Output Compare 2 Clear Enable) & OC2M (Output Compare 2 Mode)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 2 là Ngõ Ra (Output)]**<br>- **Bit 15 (OC2CE):** Cho phép ép tắt PWM ngay lập tức khi có tín hiệu lỗi ngoài.<br>- **Bits 14:12 (OC2M - Chọn chế độ Output):** <br>👉 Chọn `110` để chạy **PWM Mode 1** (chế độ PWM thông dụng nhất hiện nay).<br>👉 Chọn `011` để tạo chế độ Toggle (Đảo trạng thái chân).<br><br>**[Nếu Kênh 2 là Ngõ Vào (Input)]**<br>- **Bits 15:12 (IC2F - Bộ lọc nhiễu):** Chống nhiễu cho tín hiệu vào. Cài số càng lớn, khả năng lọc nhiễu càng tốt nhưng sẽ phản hồi chậm hơn một xíu.",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:12",
+      "name": "OC2CE (Output Compare 2 Clear Enable) & OC2M (Output Compare 2 Mode)",
+      "access": "R/W",
+      "desc": "**[Nếu Kênh 2 là Ngõ Ra (Output)]**<br>- **Bit 15 (OC2CE):** Cho phép ép tắt PWM ngay lập tức khi có tín hiệu lỗi ngoài.<br>- **Bits 14:12 (OC2M - Chọn chế độ Output):** <br>👉 Chọn `110` để chạy **PWM Mode 1** (chế độ PWM thông dụng nhất hiện nay).<br>👉 Chọn `011` để tạo chế độ Toggle (Đảo trạng thái chân).<br><br>**[Nếu Kênh 2 là Ngõ Vào (Input)]**<br>- **Bits 15:12 (IC2F - Bộ lọc nhiễu):** Chống nhiễu cho tín hiệu vào. Cài số càng lớn, khả năng lọc nhiễu càng tốt nhưng sẽ phản hồi chậm hơn một xíu.",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 15,
+  "hasBits": true
+}

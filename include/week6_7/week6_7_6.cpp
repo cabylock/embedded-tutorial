@@ -73,7 +73,7 @@ void tim3_init_pwm_1khz(void)
    TIM3->CCMR1 |= (6 << 4); /* pwm mode 1 */
    TIM3->CCMR1 |= (1 << 3);
 
-   TIM3->CCER |= (1 << 0);
+   TIM3->CCER |= (1 << 0); // enable ch1
    TIM3->CR1 |= (1 << 7);
 
    TIM3->EGR = (1 << 0);

@@ -1,0 +1,203 @@
+{
+  "id": "EXTI_RTSR (Rising Trigger Selection Register)",
+  "title": "Rising Trigger Selection Register.",
+  "offset": "0x08",
+  "resetValue": "N/A",
+  "groupLabel": "EXTI (External Interrupt)",
+  "rows": [
+    {
+      "bits": "22:0",
+      "name": "TRx (Trigger Selection)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)"
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "22:0",
+      "name": "TR0 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "22:0",
+      "name": "TR1 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "22:0",
+      "name": "TR2 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "22:0",
+      "name": "TR3 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "22:0",
+      "name": "TR4 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "22:0",
+      "name": "TR5 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "22:0",
+      "name": "TR6 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "22:0",
+      "name": "TR7 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "22:0",
+      "name": "TR8 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "22:0",
+      "name": "TR9 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "22:0",
+      "name": "TR10 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "22:0",
+      "name": "TR11 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "22:0",
+      "name": "TR12 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "22:0",
+      "name": "TR13 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "22:0",
+      "name": "TR14 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "22:0",
+      "name": "TR15 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "22:0",
+      "name": "TR16 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "22:0",
+      "name": "TR17 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "22:0",
+      "name": "TR18 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "22:0",
+      "name": "TR19 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "22:0",
+      "name": "TR20 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "22:0",
+      "name": "TR21 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "22:0",
+      "name": "TR22 (Trigger Register)",
+      "access": "R/W",
+      "desc": "Rising trigger event configuration bit of line x (1: Enabled)",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 22,
+  "hasBits": true
+}

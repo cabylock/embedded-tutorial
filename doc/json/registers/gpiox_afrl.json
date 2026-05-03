@@ -1,0 +1,317 @@
+{
+  "id": "GPIOx_AFRL (Alternate Function Low Register)",
+  "title": "GPIO Alternate Function Low Register (pins 0-7).",
+  "offset": "0x20",
+  "resetValue": "N/A",
+  "groupLabel": "GPIOx (General-Purpose I/Os)",
+  "rows": [
+    {
+      "bits": "31:28",
+      "name": "AFSEL7 (Alternate Function Selection 7)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 7. Dùng khi muốn chân 7 làm UART, SPI, I2C, PWM, v.v."
+    },
+    {
+      "bits": "27:24",
+      "name": "AFSEL6 (Alternate Function Selection 6)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 6. Dùng khi muốn chân 6 làm UART, SPI, I2C, PWM, v.v."
+    },
+    {
+      "bits": "23:20",
+      "name": "AFSEL5 (Alternate Function Selection 5)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 5. Dùng khi muốn chân 5 làm UART, SPI, I2C, PWM, v.v."
+    },
+    {
+      "bits": "19:16",
+      "name": "AFSEL4 (Alternate Function Selection 4)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 4. Dùng khi muốn chân 4 làm UART, SPI, I2C, PWM, v.v."
+    },
+    {
+      "bits": "15:12",
+      "name": "AFSEL3 (Alternate Function Selection 3)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 3. Dùng khi muốn chân 3 làm UART, SPI, I2C, PWM, v.v."
+    },
+    {
+      "bits": "11:8",
+      "name": "AFSEL2 (Alternate Function Selection 2)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 2. Dùng khi muốn chân 2 làm UART, SPI, I2C, PWM, v.v."
+    },
+    {
+      "bits": "7:4",
+      "name": "AFSEL1 (Alternate Function Selection 1)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 1. Dùng khi muốn chân 1 làm UART, SPI, I2C, PWM, v.v."
+    },
+    {
+      "bits": "3:0",
+      "name": "AFSEL0 (Alternate Function Selection 0)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 0. Dùng khi muốn chân 0 làm UART, SPI, I2C, PWM, v.v."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "3:0",
+      "name": "AFSEL0 (Alternate Function Selection 0)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 0. Dùng khi muốn chân 0 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "3:0",
+      "name": "AFSEL0 (Alternate Function Selection 0)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 0. Dùng khi muốn chân 0 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "3:0",
+      "name": "AFSEL0 (Alternate Function Selection 0)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 0. Dùng khi muốn chân 0 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3:0",
+      "name": "AFSEL0 (Alternate Function Selection 0)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 0. Dùng khi muốn chân 0 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "7:4",
+      "name": "AFSEL1 (Alternate Function Selection 1)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 1. Dùng khi muốn chân 1 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "7:4",
+      "name": "AFSEL1 (Alternate Function Selection 1)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 1. Dùng khi muốn chân 1 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "7:4",
+      "name": "AFSEL1 (Alternate Function Selection 1)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 1. Dùng khi muốn chân 1 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7:4",
+      "name": "AFSEL1 (Alternate Function Selection 1)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 1. Dùng khi muốn chân 1 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "11:8",
+      "name": "AFSEL2 (Alternate Function Selection 2)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 2. Dùng khi muốn chân 2 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "11:8",
+      "name": "AFSEL2 (Alternate Function Selection 2)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 2. Dùng khi muốn chân 2 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "11:8",
+      "name": "AFSEL2 (Alternate Function Selection 2)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 2. Dùng khi muốn chân 2 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "11:8",
+      "name": "AFSEL2 (Alternate Function Selection 2)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 2. Dùng khi muốn chân 2 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "15:12",
+      "name": "AFSEL3 (Alternate Function Selection 3)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 3. Dùng khi muốn chân 3 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "15:12",
+      "name": "AFSEL3 (Alternate Function Selection 3)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 3. Dùng khi muốn chân 3 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:12",
+      "name": "AFSEL3 (Alternate Function Selection 3)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 3. Dùng khi muốn chân 3 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:12",
+      "name": "AFSEL3 (Alternate Function Selection 3)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 3. Dùng khi muốn chân 3 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "19:16",
+      "name": "AFSEL4 (Alternate Function Selection 4)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 4. Dùng khi muốn chân 4 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "19:16",
+      "name": "AFSEL4 (Alternate Function Selection 4)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 4. Dùng khi muốn chân 4 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "19:16",
+      "name": "AFSEL4 (Alternate Function Selection 4)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 4. Dùng khi muốn chân 4 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "19:16",
+      "name": "AFSEL4 (Alternate Function Selection 4)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 4. Dùng khi muốn chân 4 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "23:20",
+      "name": "AFSEL5 (Alternate Function Selection 5)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 5. Dùng khi muốn chân 5 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "23:20",
+      "name": "AFSEL5 (Alternate Function Selection 5)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 5. Dùng khi muốn chân 5 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "23:20",
+      "name": "AFSEL5 (Alternate Function Selection 5)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 5. Dùng khi muốn chân 5 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 23,
+      "rangeLabel": "23:20",
+      "name": "AFSEL5 (Alternate Function Selection 5)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 5. Dùng khi muốn chân 5 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 24,
+      "rangeLabel": "27:24",
+      "name": "AFSEL6 (Alternate Function Selection 6)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 6. Dùng khi muốn chân 6 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 25,
+      "rangeLabel": "27:24",
+      "name": "AFSEL6 (Alternate Function Selection 6)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 6. Dùng khi muốn chân 6 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 26,
+      "rangeLabel": "27:24",
+      "name": "AFSEL6 (Alternate Function Selection 6)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 6. Dùng khi muốn chân 6 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 27,
+      "rangeLabel": "27:24",
+      "name": "AFSEL6 (Alternate Function Selection 6)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 6. Dùng khi muốn chân 6 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 28,
+      "rangeLabel": "31:28",
+      "name": "AFSEL7 (Alternate Function Selection 7)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 7. Dùng khi muốn chân 7 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 29,
+      "rangeLabel": "31:28",
+      "name": "AFSEL7 (Alternate Function Selection 7)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 7. Dùng khi muốn chân 7 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 30,
+      "rangeLabel": "31:28",
+      "name": "AFSEL7 (Alternate Function Selection 7)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 7. Dùng khi muốn chân 7 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    },
+    {
+      "bit": 31,
+      "rangeLabel": "31:28",
+      "name": "AFSEL7 (Alternate Function Selection 7)",
+      "access": "R/W",
+      "desc": "Chọn chức năng phụ (Alternate Function) cho chân 7. Dùng khi muốn chân 7 làm UART, SPI, I2C, PWM, v.v.",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 31,
+  "hasBits": true
+}

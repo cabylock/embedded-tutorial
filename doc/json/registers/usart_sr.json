@@ -1,0 +1,207 @@
+{
+  "id": "USART_SR (Status Register)",
+  "title": "Status Register.",
+  "offset": "0x00",
+  "resetValue": "N/A",
+  "groupLabel": "USART2",
+  "rows": [
+    {
+      "bits": "15:10",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "9",
+      "name": "CTS (Clear to Send)",
+      "access": "R/W0",
+      "desc": "CTS flag (Hardware flow control)"
+    },
+    {
+      "bits": "8",
+      "name": "LBD (LIN Break Detection Flag)",
+      "access": "R/W0",
+      "desc": "LIN break detection flag"
+    },
+    {
+      "bits": "7",
+      "name": "TXE (Transmit Data Empty)",
+      "access": "R",
+      "desc": "Cờ TXE (Transmit Empty): Báo hiệu thanh ghi dữ liệu đang trống, có thể ghi byte mới vào để gửi đi."
+    },
+    {
+      "bits": "6",
+      "name": "TC (Transmission Complete)",
+      "access": "R/W0",
+      "desc": "Cờ TC (Transmission Complete): Báo hiệu đã truyền xong toàn bộ dữ liệu ra ngoài chân TX."
+    },
+    {
+      "bits": "5",
+      "name": "RXNE (Read Data Not Empty)",
+      "access": "R/W0",
+      "desc": "Cờ RXNE (Receive Not Empty): Báo hiệu đã nhận được một byte dữ liệu mới, có thể đọc ngay."
+    },
+    {
+      "bits": "4",
+      "name": "IDLE (Idle Line)",
+      "access": "R",
+      "desc": "Idle line detected"
+    },
+    {
+      "bits": "3",
+      "name": "ORE (Overrun Error)",
+      "access": "R",
+      "desc": "Overrun error"
+    },
+    {
+      "bits": "2",
+      "name": "NF (Noise Flag)",
+      "access": "R",
+      "desc": "Noise detected flag"
+    },
+    {
+      "bits": "1",
+      "name": "FE (Framing Error)",
+      "access": "R",
+      "desc": "Framing error"
+    },
+    {
+      "bits": "0",
+      "name": "PE (Parity Error)",
+      "access": "R",
+      "desc": "Parity error"
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "0",
+      "name": "PE (Parity Error)",
+      "access": "R",
+      "desc": "Parity error",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1",
+      "name": "FE (Framing Error)",
+      "access": "R",
+      "desc": "Framing error",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "2",
+      "name": "NF (Noise Flag)",
+      "access": "R",
+      "desc": "Noise detected flag",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3",
+      "name": "ORE (Overrun Error)",
+      "access": "R",
+      "desc": "Overrun error",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "4",
+      "name": "IDLE (Idle Line)",
+      "access": "R",
+      "desc": "Idle line detected",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "5",
+      "name": "R5NE",
+      "access": "R/W0",
+      "desc": "Cờ RXNE (Receive Not Empty): Báo hiệu đã nhận được một byte dữ liệu mới, có thể đọc ngay.",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "6",
+      "name": "TC (Transmission Complete)",
+      "access": "R/W0",
+      "desc": "Cờ TC (Transmission Complete): Báo hiệu đã truyền xong toàn bộ dữ liệu ra ngoài chân TX.",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7",
+      "name": "T7E",
+      "access": "R",
+      "desc": "Cờ TXE (Transmit Empty): Báo hiệu thanh ghi dữ liệu đang trống, có thể ghi byte mới vào để gửi đi.",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "8",
+      "name": "LBD (LIN Break Detection Flag)",
+      "access": "R/W0",
+      "desc": "LIN break detection flag",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "9",
+      "name": "CTS (Clear to Send)",
+      "access": "R/W0",
+      "desc": "CTS flag (Hardware flow control)",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    }
+  ],
+  "maxBit": 15,
+  "hasBits": true
+}

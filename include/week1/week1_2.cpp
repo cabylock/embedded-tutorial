@@ -2,17 +2,20 @@
 
 int main(void)
 {
-	RCC->AHB1ENR |= 1 << 0;
-	GPIOA->MODER |= 1 << (2*5);
+    RCC-> AHB1ENR |= 1 <<0 ;
+    GPIOA ->MODER |= 1 << (2*5); // user led pa5 output mode
+
+
+
 
     RCC->AHB1ENR |= 1 << 2;
     GPIOC->MODER &= ~(3 << (2*13)); 
     GPIOC->PUPDR &= ~(3 << (2*13));
-    
+
     uint16_t is_pressed; 
 	while(1)
 	{      
-        is_pressed = GPIOC->IDR & (1<<13);
+        is_pressed = GPIOC ->IDR & (1 <<13); 
         if (is_pressed == 0) {
 
             GPIOA -> BSRR = 1 << 5;

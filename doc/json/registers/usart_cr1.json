@@ -1,0 +1,237 @@
+{
+  "id": "USART_CR1 (Control Register 1)",
+  "title": "Control Register 1.",
+  "offset": "0x0C",
+  "resetValue": "N/A",
+  "groupLabel": "USART2",
+  "rows": [
+    {
+      "bits": "15",
+      "name": "OVER8 (Oversampling by 8)",
+      "access": "R/W",
+      "desc": "Chế độ lấy mẫu quá (Oversampling). 0: Lấy mẫu 16 lần (chuẩn), 1: Lấy mẫu 8 lần."
+    },
+    {
+      "bits": "14",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "13",
+      "name": "UE (USART Enable)",
+      "access": "R/W",
+      "desc": "Bật module USART hoạt động."
+    },
+    {
+      "bits": "12",
+      "name": "M (Word Length)",
+      "access": "R/W",
+      "desc": "Word length (0: 8 Data bits, 1: 9 Data bits)"
+    },
+    {
+      "bits": "11",
+      "name": "WAKE (Wakeup Method)",
+      "access": "R/W",
+      "desc": "Wakeup method (0: Idle line, 1: Address mark)"
+    },
+    {
+      "bits": "10",
+      "name": "PCE (Parity Control Enable)",
+      "access": "R/W",
+      "desc": "Parity control enable"
+    },
+    {
+      "bits": "9",
+      "name": "PS (Parity Selection)",
+      "access": "R/W",
+      "desc": "Parity selection (0: Even, 1: Odd)"
+    },
+    {
+      "bits": "8",
+      "name": "PEIE (PE Interrupt Enable)",
+      "access": "R/W",
+      "desc": "PE interrupt enable"
+    },
+    {
+      "bits": "7",
+      "name": "TXEIE (TXE Interrupt Enable)",
+      "access": "R/W",
+      "desc": "Bật ngắt khi thanh ghi gửi (TXE) trống rỗng."
+    },
+    {
+      "bits": "6",
+      "name": "TCIE (TC Interrupt Enable)",
+      "access": "R/W",
+      "desc": "Transmission complete interrupt enable"
+    },
+    {
+      "bits": "5",
+      "name": "RXNEIE (RXNE Interrupt Enable)",
+      "access": "R/W",
+      "desc": "Bật ngắt khi nhận được dữ liệu (RXNE)."
+    },
+    {
+      "bits": "4",
+      "name": "IDLEIE (IDLE Interrupt Enable)",
+      "access": "R/W",
+      "desc": "IDLE interrupt enable"
+    },
+    {
+      "bits": "3",
+      "name": "TE (Transmitter Enable)",
+      "access": "R/W",
+      "desc": "Bật tính năng truyền dữ liệu (TX)."
+    },
+    {
+      "bits": "2",
+      "name": "RE (Receiver Enable)",
+      "access": "R/W",
+      "desc": "Bật tính năng nhận dữ liệu (RX)."
+    },
+    {
+      "bits": "1",
+      "name": "RWU (Receiver Wakeup)",
+      "access": "R/W",
+      "desc": "Receiver wakeup"
+    },
+    {
+      "bits": "0",
+      "name": "SBK (Send Break)",
+      "access": "R/W",
+      "desc": "Send break"
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "0",
+      "name": "SBK (Send Break)",
+      "access": "R/W",
+      "desc": "Send break",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1",
+      "name": "RWU (Receiver Wakeup)",
+      "access": "R/W",
+      "desc": "Receiver wakeup",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "2",
+      "name": "RE (Receiver Enable)",
+      "access": "R/W",
+      "desc": "Bật tính năng nhận dữ liệu (RX).",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3",
+      "name": "TE (Transmitter Enable)",
+      "access": "R/W",
+      "desc": "Bật tính năng truyền dữ liệu (TX).",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "4",
+      "name": "IDLEIE (IDLE Interrupt Enable)",
+      "access": "R/W",
+      "desc": "IDLE interrupt enable",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "5",
+      "name": "RXNEIE (RXNE Interrupt Enable)",
+      "access": "R/W",
+      "desc": "Bật ngắt khi nhận được dữ liệu (RXNE).",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "6",
+      "name": "TCIE (TC Interrupt Enable)",
+      "access": "R/W",
+      "desc": "Transmission complete interrupt enable",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7",
+      "name": "TXEIE (TXE Interrupt Enable)",
+      "access": "R/W",
+      "desc": "Bật ngắt khi thanh ghi gửi (TXE) trống rỗng.",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "8",
+      "name": "PEIE (PE Interrupt Enable)",
+      "access": "R/W",
+      "desc": "PE interrupt enable",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "9",
+      "name": "PS (Parity Selection)",
+      "access": "R/W",
+      "desc": "Parity selection (0: Even, 1: Odd)",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "10",
+      "name": "PCE (Parity Control Enable)",
+      "access": "R/W",
+      "desc": "Parity control enable",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "11",
+      "name": "WAKE (Wakeup Method)",
+      "access": "R/W",
+      "desc": "Wakeup method (0: Idle line, 1: Address mark)",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "12",
+      "name": "M (Word Length)",
+      "access": "R/W",
+      "desc": "Word length (0: 8 Data bits, 1: 9 Data bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "13",
+      "name": "UE (USART Enable)",
+      "access": "R/W",
+      "desc": "Bật module USART hoạt động.",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "14",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15",
+      "name": "OVER8 (Oversampling by 8)",
+      "access": "R/W",
+      "desc": "Chế độ lấy mẫu quá (Oversampling). 0: Lấy mẫu 16 lần (chuẩn), 1: Lấy mẫu 8 lần.",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 15,
+  "hasBits": true
+}

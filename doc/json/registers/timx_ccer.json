@@ -1,0 +1,237 @@
+{
+  "id": "TIMx_CCER (Capture/Compare Enable Register)",
+  "title": "Capture/Compare Enable Register. Dong vai tro nhu cau dao tong va quyet dinh su phan cuc (dao chieu) cho tin hieu cua 4 kenh Timer.",
+  "offset": "0x20",
+  "resetValue": "0x0000 0000",
+  "groupLabel": "TIM2 to TIM5 (General-Purpose Timers)",
+  "rows": [
+    {
+      "bits": "15",
+      "name": "CC4NP (Capture/Compare 4 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 4 Non-Polarity:** Ket hop voi CC4P de bat 2 suon khi o che do Input."
+    },
+    {
+      "bits": "14",
+      "name": "Res",
+      "access": "-",
+      "desc": "*Reserved (Du phong)*"
+    },
+    {
+      "bits": "13",
+      "name": "CC4P (Capture/Compare 4 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 4 Polarity:** <br> - Output: 0 = Active High, 1 = Active Low. <br> - Input: 0 = Bat suon len, 1 = Bat suon xuong."
+    },
+    {
+      "bits": "12",
+      "name": "CC4E (Capture/Compare 4 Output Enable)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 4 Enable:** 0 = Tat kenh, 1 = Bat kenh."
+    },
+    {
+      "bits": "11",
+      "name": "CC3NP (Capture/Compare 3 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 3 Non-Polarity:** Ket hop voi CC3P de bat 2 suon khi o che do Input."
+    },
+    {
+      "bits": "10",
+      "name": "Res",
+      "access": "-",
+      "desc": "*Reserved (Du phong)*"
+    },
+    {
+      "bits": "9",
+      "name": "CC3P (Capture/Compare 3 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 3 Polarity:** Tuong tu Kenh 4."
+    },
+    {
+      "bits": "8",
+      "name": "CC3E (Capture/Compare 3 Output Enable)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 3 Enable:** 0 = Tat kenh, 1 = Bat kenh."
+    },
+    {
+      "bits": "7",
+      "name": "CC2NP (Capture/Compare 2 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 2 Non-Polarity:** Ket hop voi CC2P de bat 2 suon khi o che do Input."
+    },
+    {
+      "bits": "6",
+      "name": "Res",
+      "access": "-",
+      "desc": "*Reserved (Du phong)*"
+    },
+    {
+      "bits": "5",
+      "name": "CC2P (Capture/Compare 2 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 2 Polarity:** Tuong tu Kenh 4."
+    },
+    {
+      "bits": "4",
+      "name": "CC2E (Capture/Compare 2 Output Enable)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 2 Enable:** 0 = Tat kenh, 1 = Bat kenh."
+    },
+    {
+      "bits": "3",
+      "name": "CC1NP (Capture/Compare 1 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 1 Non-Polarity:** Ket hop voi CC1P de bat 2 suon khi o che do Input."
+    },
+    {
+      "bits": "2",
+      "name": "Res",
+      "access": "-",
+      "desc": "*Reserved (Chi dung lam CC1NE tren Timer nang cao TIM1/8)*"
+    },
+    {
+      "bits": "1",
+      "name": "CC1P (Capture/Compare 1 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 1 Polarity:** Tuong tu Kenh 4."
+    },
+    {
+      "bits": "0",
+      "name": "CC1E (Capture/Compare 1 Output Enable)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 1 Enable:** 0 = Tat kenh, 1 = Bat kenh."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "0",
+      "name": "CC1E (Capture/Compare 1 Output Enable)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 1 Enable:** 0 = Tat kenh, 1 = Bat kenh.",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1",
+      "name": "CC1P (Capture/Compare 1 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 1 Polarity:** Tuong tu Kenh 4.",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "2",
+      "name": "Res",
+      "access": "-",
+      "desc": "*Reserved (Chi dung lam CC1NE tren Timer nang cao TIM1/8)*",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3",
+      "name": "CC1NP (Capture/Compare 1 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 1 Non-Polarity:** Ket hop voi CC1P de bat 2 suon khi o che do Input.",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "4",
+      "name": "CC2E (Capture/Compare 2 Output Enable)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 2 Enable:** 0 = Tat kenh, 1 = Bat kenh.",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "5",
+      "name": "CC2P (Capture/Compare 2 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 2 Polarity:** Tuong tu Kenh 4.",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "6",
+      "name": "Res",
+      "access": "-",
+      "desc": "*Reserved (Du phong)*",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7",
+      "name": "CC2NP (Capture/Compare 2 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 2 Non-Polarity:** Ket hop voi CC2P de bat 2 suon khi o che do Input.",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "8",
+      "name": "CC3E (Capture/Compare 3 Output Enable)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 3 Enable:** 0 = Tat kenh, 1 = Bat kenh.",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "9",
+      "name": "CC3P (Capture/Compare 3 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 3 Polarity:** Tuong tu Kenh 4.",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "10",
+      "name": "Res",
+      "access": "-",
+      "desc": "*Reserved (Du phong)*",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "11",
+      "name": "CC3NP (Capture/Compare 3 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 3 Non-Polarity:** Ket hop voi CC3P de bat 2 suon khi o che do Input.",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "12",
+      "name": "CC4E (Capture/Compare 4 Output Enable)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 4 Enable:** 0 = Tat kenh, 1 = Bat kenh.",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "13",
+      "name": "CC4P (Capture/Compare 4 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 4 Polarity:** <br> - Output: 0 = Active High, 1 = Active Low. <br> - Input: 0 = Bat suon len, 1 = Bat suon xuong.",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "14",
+      "name": "Res",
+      "access": "-",
+      "desc": "*Reserved (Du phong)*",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15",
+      "name": "CC4NP (Capture/Compare 4 Output Polarity)",
+      "access": "R/W",
+      "desc": "**Capture/Compare 4 Non-Polarity:** Ket hop voi CC4P de bat 2 suon khi o che do Input.",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 15,
+  "hasBits": true
+}

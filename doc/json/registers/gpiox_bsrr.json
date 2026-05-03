@@ -1,0 +1,281 @@
+{
+  "id": "GPIOx_BSRR (Bit Set/Reset Register)",
+  "title": "GPIO Port Bit Set/Reset Register (atomic).",
+  "offset": "0x18",
+  "resetValue": "N/A",
+  "groupLabel": "GPIOx (General-Purpose I/Os)",
+  "rows": [
+    {
+      "bits": "31:16",
+      "name": "BR15:BR0 (Bit Reset 15:0)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả."
+    },
+    {
+      "bits": "15:0",
+      "name": "BS15:BS0 (Bit Set 15:0)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "15:0",
+      "name": "BS0 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "15:0",
+      "name": "BS1 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "15:0",
+      "name": "BS2 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "15:0",
+      "name": "BS3 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "15:0",
+      "name": "BS4 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "15:0",
+      "name": "BS5 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "15:0",
+      "name": "BS6 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "15:0",
+      "name": "BS7 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "15:0",
+      "name": "BS8 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "15:0",
+      "name": "BS9 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "15:0",
+      "name": "BS10 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "15:0",
+      "name": "BS11 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "15:0",
+      "name": "BS12 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "15:0",
+      "name": "BS13 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:0",
+      "name": "BS14 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:0",
+      "name": "BS15 (Bit Set)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng bật (lên 3.3V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "31:16",
+      "name": "BR0 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "31:16",
+      "name": "BR1 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "31:16",
+      "name": "BR2 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "31:16",
+      "name": "BR3 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "31:16",
+      "name": "BR4 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "31:16",
+      "name": "BR5 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "31:16",
+      "name": "BR6 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 23,
+      "rangeLabel": "31:16",
+      "name": "BR7 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 24,
+      "rangeLabel": "31:16",
+      "name": "BR8 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 25,
+      "rangeLabel": "31:16",
+      "name": "BR9 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 26,
+      "rangeLabel": "31:16",
+      "name": "BR10 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 27,
+      "rangeLabel": "31:16",
+      "name": "BR11 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 28,
+      "rangeLabel": "31:16",
+      "name": "BR12 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 29,
+      "rangeLabel": "31:16",
+      "name": "BR13 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 30,
+      "rangeLabel": "31:16",
+      "name": "BR14 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    },
+    {
+      "bit": 31,
+      "rangeLabel": "31:16",
+      "name": "BR15 (Bit Reset)",
+      "access": "W",
+      "desc": "Ghi số 1 vào bit này sẽ làm cho chân tương ứng tắt (xuống 0V). Ghi số 0 sẽ không làm gì cả.",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 31,
+  "hasBits": true
+}

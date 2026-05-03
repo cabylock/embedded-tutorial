@@ -1,0 +1,165 @@
+{
+  "id": "SYSCFG_EXTICR4 (External Interrupt Configuration Register 4)",
+  "title": "External Interrupt Configuration Register 4.",
+  "offset": "0x14",
+  "resetValue": "N/A",
+  "groupLabel": "SYSCFG (System Configuration)",
+  "rows": [
+    {
+      "bits": "15:12",
+      "name": "EXTIx (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 15"
+    },
+    {
+      "bits": "11:8",
+      "name": "EXTIx (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 14"
+    },
+    {
+      "bits": "7:4",
+      "name": "EXTIx (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 13"
+    },
+    {
+      "bits": "3:0",
+      "name": "EXTIx (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 12"
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "3:0",
+      "name": "EXTI0 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 12",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "3:0",
+      "name": "EXTI1 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 12",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "3:0",
+      "name": "EXTI2 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 12",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3:0",
+      "name": "EXTI3 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 12",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "7:4",
+      "name": "EXTI4 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 13",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "7:4",
+      "name": "EXTI5 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 13",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "7:4",
+      "name": "EXTI6 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 13",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7:4",
+      "name": "EXTI7 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 13",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "11:8",
+      "name": "EXTI8 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 14",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "11:8",
+      "name": "EXTI9 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 14",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "11:8",
+      "name": "EXTI10 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 14",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "11:8",
+      "name": "EXTI11 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 14",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "15:12",
+      "name": "EXTI12 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 15",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "15:12",
+      "name": "EXTI13 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 15",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:12",
+      "name": "EXTI14 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 15",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:12",
+      "name": "EXTI15 (External Interrupt)",
+      "access": "R/W",
+      "desc": "Cau hinh cho Line 15",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 15,
+  "hasBits": true
+}

@@ -1,0 +1,365 @@
+{
+  "id": "GPIOx_PUPDR (Pull-Up/Pull-Down Register)",
+  "title": "GPIO Port Pull-up/Pull-down Register.",
+  "offset": "0x0C",
+  "resetValue": "N/A",
+  "groupLabel": "GPIOx (General-Purpose I/Os)",
+  "rows": [
+    {
+      "bits": "31:30",
+      "name": "PUPDR15 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 15. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "29:28",
+      "name": "PUPDR14 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 14. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "27:26",
+      "name": "PUPDR13 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 13. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "25:24",
+      "name": "PUPDR12 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 12. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "23:22",
+      "name": "PUPDR11 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 11. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "21:20",
+      "name": "PUPDR10 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 10. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "19:18",
+      "name": "PUPDR9 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 9. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "17:16",
+      "name": "PUPDR8 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 8. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "15:14",
+      "name": "PUPDR7 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 7. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "13:12",
+      "name": "PUPDR6 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 6. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "11:10",
+      "name": "PUPDR5 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 5. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "9:8",
+      "name": "PUPDR4 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 4. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "7:6",
+      "name": "PUPDR3 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 3. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "5:4",
+      "name": "PUPDR2 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 2. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "3:2",
+      "name": "PUPDR1 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 1. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    },
+    {
+      "bits": "1:0",
+      "name": "PUPDR0 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 0. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down)."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "1:0",
+      "name": "PUPDR0 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 0. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1:0",
+      "name": "PUPDR0 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 0. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "3:2",
+      "name": "PUPDR1 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 1. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3:2",
+      "name": "PUPDR1 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 1. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "5:4",
+      "name": "PUPDR2 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 2. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "5:4",
+      "name": "PUPDR2 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 2. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "7:6",
+      "name": "PUPDR3 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 3. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7:6",
+      "name": "PUPDR3 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 3. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "9:8",
+      "name": "PUPDR4 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 4. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "9:8",
+      "name": "PUPDR4 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 4. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "11:10",
+      "name": "PUPDR5 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 5. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "11:10",
+      "name": "PUPDR5 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 5. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "13:12",
+      "name": "PUPDR6 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 6. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "13:12",
+      "name": "PUPDR6 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 6. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:14",
+      "name": "PUPDR7 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 7. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:14",
+      "name": "PUPDR7 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 7. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "17:16",
+      "name": "PUPDR8 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 8. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "17:16",
+      "name": "PUPDR8 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 8. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "19:18",
+      "name": "PUPDR9 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 9. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "19:18",
+      "name": "PUPDR9 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 9. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "21:20",
+      "name": "PUPDR10 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 10. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "21:20",
+      "name": "PUPDR10 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 10. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "23:22",
+      "name": "PUPDR11 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 11. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 23,
+      "rangeLabel": "23:22",
+      "name": "PUPDR11 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 11. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 24,
+      "rangeLabel": "25:24",
+      "name": "PUPDR12 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 12. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 25,
+      "rangeLabel": "25:24",
+      "name": "PUPDR12 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 12. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 26,
+      "rangeLabel": "27:26",
+      "name": "PUPDR13 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 13. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 27,
+      "rangeLabel": "27:26",
+      "name": "PUPDR13 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 13. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 28,
+      "rangeLabel": "29:28",
+      "name": "PUPDR14 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 14. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 29,
+      "rangeLabel": "29:28",
+      "name": "PUPDR14 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 14. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 30,
+      "rangeLabel": "31:30",
+      "name": "PUPDR15 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 15. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    },
+    {
+      "bit": 31,
+      "rangeLabel": "31:30",
+      "name": "PUPDR15 (Pull-Up/Pull-Down)",
+      "access": "R/W",
+      "desc": "Trạng thái điện trở kéo của chân 15. [00]: Thả nổi, [01]: Kéo lên nguồn 3.3V (Pull-up), [10]: Kéo xuống đất 0V (Pull-down).",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 31,
+  "hasBits": true
+}

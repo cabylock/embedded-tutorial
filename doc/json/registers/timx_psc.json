@@ -1,0 +1,147 @@
+{
+  "id": "TIMx_PSC (Prescaler Register)",
+  "title": "Prescaler Register.",
+  "offset": "0x28",
+  "resetValue": "N/A",
+  "groupLabel": "TIMx (Basic/General Purpose Timers)",
+  "rows": [
+    {
+      "bits": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))"
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:0",
+      "name": "PSC (Prescaler)",
+      "access": "R/W",
+      "desc": "Prescaler value (Clock / (PSC + 1))",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 15,
+  "hasBits": true
+}

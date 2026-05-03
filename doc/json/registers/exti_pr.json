@@ -1,0 +1,203 @@
+{
+  "id": "EXTI_PR (Pending Register)",
+  "title": "Pending Register.",
+  "offset": "0x14",
+  "resetValue": "N/A",
+  "groupLabel": "EXTI (External Interrupt)",
+  "rows": [
+    {
+      "bits": "22:0",
+      "name": "PRx (Pending)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý)."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "22:0",
+      "name": "PR0 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "22:0",
+      "name": "PR1 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "22:0",
+      "name": "PR2 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "22:0",
+      "name": "PR3 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "22:0",
+      "name": "PR4 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "22:0",
+      "name": "PR5 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "22:0",
+      "name": "PR6 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "22:0",
+      "name": "PR7 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "22:0",
+      "name": "PR8 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "22:0",
+      "name": "PR9 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "22:0",
+      "name": "PR10 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "22:0",
+      "name": "PR11 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "22:0",
+      "name": "PR12 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "22:0",
+      "name": "PR13 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "22:0",
+      "name": "PR14 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "22:0",
+      "name": "PR15 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "22:0",
+      "name": "PR16 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "22:0",
+      "name": "PR17 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "22:0",
+      "name": "PR18 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "22:0",
+      "name": "PR19 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "22:0",
+      "name": "PR20 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "22:0",
+      "name": "PR21 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "22:0",
+      "name": "PR22 (Pending Register)",
+      "access": "R/W1C",
+      "desc": "Cờ báo ngắt ngoài đã xảy ra. LƯU Ý: Phải ghi số 1 vào bit này để xóa cờ ngắt (xác nhận đã xử lý).",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 22,
+  "hasBits": true
+}

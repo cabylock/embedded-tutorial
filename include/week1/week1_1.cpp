@@ -3,8 +3,8 @@
 
 int main(void)
 {
-	RCC->AHB1ENR |= 1 << 0;
-	GPIOA->MODER |= 1 << (2*5);
+	RCC->AHB1ENR |= 1 << 0; // enable clock for gpioA
+	GPIOA->MODER |= 1 << (2*5); // user led pa5 output mode
 
 
 	while(1)

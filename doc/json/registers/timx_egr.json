@@ -1,0 +1,177 @@
+{
+  "id": "TIMx_EGR (Event Generation Register)",
+  "title": "Event Generation Register.",
+  "offset": "0x14",
+  "resetValue": "N/A",
+  "groupLabel": "TIMx (Basic/General Purpose Timers)",
+  "rows": [
+    {
+      "bits": "15:5",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "4",
+      "name": "TG (Trigger Generation)",
+      "access": "W",
+      "desc": "Trigger generation"
+    },
+    {
+      "bits": "3",
+      "name": "CC4G (Capture/Compare 4 Generation)",
+      "access": "W",
+      "desc": "Capture/compare 4 generation"
+    },
+    {
+      "bits": "2",
+      "name": "CC3G (Capture/Compare 3 Generation)",
+      "access": "W",
+      "desc": "Capture/compare 3 generation"
+    },
+    {
+      "bits": "1",
+      "name": "CC2G (Capture/Compare 2 Generation)",
+      "access": "W",
+      "desc": "Capture/compare 2 generation"
+    },
+    {
+      "bits": "0",
+      "name": "UG (Update Generation)",
+      "access": "W",
+      "desc": "Tạo một sự kiện Update ngay lập tức (giống như khi đếm tràn). Thường dùng để reset lại Timer."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "0",
+      "name": "UG (Update Generation)",
+      "access": "W",
+      "desc": "Tạo một sự kiện Update ngay lập tức (giống như khi đếm tràn). Thường dùng để reset lại Timer.",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1",
+      "name": "CC2G (Capture/Compare 2 Generation)",
+      "access": "W",
+      "desc": "Capture/compare 2 generation",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "2",
+      "name": "CC3G (Capture/Compare 3 Generation)",
+      "access": "W",
+      "desc": "Capture/compare 3 generation",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3",
+      "name": "CC4G (Capture/Compare 4 Generation)",
+      "access": "W",
+      "desc": "Capture/compare 4 generation",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "4",
+      "name": "TG (Trigger Generation)",
+      "access": "W",
+      "desc": "Trigger generation",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    }
+  ],
+  "maxBit": 15,
+  "hasBits": true
+}

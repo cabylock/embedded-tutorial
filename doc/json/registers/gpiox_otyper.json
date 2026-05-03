@@ -1,0 +1,371 @@
+{
+  "id": "GPIOx_OTYPER (Output Type Register)",
+  "title": "GPIO Port Output Type Register.",
+  "offset": "0x04",
+  "resetValue": "N/A",
+  "groupLabel": "GPIOx (General-Purpose I/Os)",
+  "rows": [
+    {
+      "bits": "31:16",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "15",
+      "name": "OT15 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 15. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "14",
+      "name": "OT14 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 14. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "13",
+      "name": "OT13 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 13. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "12",
+      "name": "OT12 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 12. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "11",
+      "name": "OT11 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 11. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "10",
+      "name": "OT10 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 10. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "9",
+      "name": "OT9 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 9. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "8",
+      "name": "OT8 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 8. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "7",
+      "name": "OT7 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 7. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "6",
+      "name": "OT6 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 6. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "5",
+      "name": "OT5 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 5. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "4",
+      "name": "OT4 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 4. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "3",
+      "name": "OT3 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 3. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "2",
+      "name": "OT2 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 2. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "1",
+      "name": "OT1 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 1. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    },
+    {
+      "bits": "0",
+      "name": "OT0 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 0. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C)."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "0",
+      "name": "OT0 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 0. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1",
+      "name": "OT1 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 1. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "2",
+      "name": "OT2 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 2. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3",
+      "name": "OT3 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 3. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "4",
+      "name": "OT4 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 4. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "5",
+      "name": "OT5 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 5. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "6",
+      "name": "OT6 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 6. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7",
+      "name": "OT7 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 7. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "8",
+      "name": "OT8 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 8. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "9",
+      "name": "OT9 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 9. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "10",
+      "name": "OT10 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 10. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "11",
+      "name": "OT11 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 11. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "12",
+      "name": "OT12 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 12. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "13",
+      "name": "OT13 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 13. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "14",
+      "name": "OT14 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 14. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15",
+      "name": "OT15 (Output Type)",
+      "access": "R/W",
+      "desc": "Kiểu xuất điện áp của chân 15. [0]: Push-pull (Đẩy-kéo, tự xuất mức 0V hoặc 3.3V), [1]: Open-drain (Mở cực máng, chỉ hút dòng về 0V, cần điện trở ngoài để kéo lên 3.3V - thường dùng cho I2C).",
+      "isReserved": false
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 23,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 24,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 25,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 26,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 27,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 28,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 29,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 30,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 31,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    }
+  ],
+  "maxBit": 31,
+  "hasBits": true
+}

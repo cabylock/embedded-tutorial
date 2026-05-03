@@ -1,0 +1,287 @@
+{
+  "id": "USART_BRR (Baud Rate Register)",
+  "title": "Baud Rate Register.",
+  "offset": "0x08",
+  "resetValue": "N/A",
+  "groupLabel": "USART2",
+  "rows": [
+    {
+      "bits": "31:16",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)"
+    },
+    {
+      "bits": "3:0",
+      "name": "DIV_Fraction (Phần lẻ Baudrate)",
+      "access": "R/W",
+      "desc": "Phan thap phan cua USARTDIV (4 bits)"
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "3:0",
+      "name": "DIV_Fraction (Phần lẻ Baudrate)",
+      "access": "R/W",
+      "desc": "Phan thap phan cua USARTDIV (4 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "3:0",
+      "name": "DIV_Fraction (Phần lẻ Baudrate)",
+      "access": "R/W",
+      "desc": "Phan thap phan cua USARTDIV (4 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "3:0",
+      "name": "DIV_Fraction (Phần lẻ Baudrate)",
+      "access": "R/W",
+      "desc": "Phan thap phan cua USARTDIV (4 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3:0",
+      "name": "DIV_Fraction (Phần lẻ Baudrate)",
+      "access": "R/W",
+      "desc": "Phan thap phan cua USARTDIV (4 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:4",
+      "name": "DIV_Mantissa (Phần nguyên Baudrate)",
+      "access": "R/W",
+      "desc": "Phan nguyen cua USARTDIV (12 bits)",
+      "isReserved": false
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 23,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 24,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 25,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 26,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 27,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 28,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 29,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 30,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 31,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    }
+  ],
+  "maxBit": 31,
+  "hasBits": true
+}

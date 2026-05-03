@@ -1,0 +1,365 @@
+{
+  "id": "GPIOx_OSPEEDR (Output Speed Register)",
+  "title": "GPIO Port Output Speed Register.",
+  "offset": "0x08",
+  "resetValue": "N/A",
+  "groupLabel": "GPIOx (General-Purpose I/Os)",
+  "rows": [
+    {
+      "bits": "31:30",
+      "name": "OSPEEDR15 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 15. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "29:28",
+      "name": "OSPEEDR14 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 14. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "27:26",
+      "name": "OSPEEDR13 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 13. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "25:24",
+      "name": "OSPEEDR12 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 12. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "23:22",
+      "name": "OSPEEDR11 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 11. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "21:20",
+      "name": "OSPEEDR10 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 10. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "19:18",
+      "name": "OSPEEDR9 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 9. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "17:16",
+      "name": "OSPEEDR8 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 8. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "15:14",
+      "name": "OSPEEDR7 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 7. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "13:12",
+      "name": "OSPEEDR6 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 6. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "11:10",
+      "name": "OSPEEDR5 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 5. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "9:8",
+      "name": "OSPEEDR4 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 4. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "7:6",
+      "name": "OSPEEDR3 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 3. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "5:4",
+      "name": "OSPEEDR2 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 2. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "3:2",
+      "name": "OSPEEDR1 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 1. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    },
+    {
+      "bits": "1:0",
+      "name": "OSPEEDR0 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 0. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "1:0",
+      "name": "OSPEEDR0 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 0. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1:0",
+      "name": "OSPEEDR0 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 0. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "3:2",
+      "name": "OSPEEDR1 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 1. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3:2",
+      "name": "OSPEEDR1 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 1. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "5:4",
+      "name": "OSPEEDR2 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 2. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "5:4",
+      "name": "OSPEEDR2 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 2. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "7:6",
+      "name": "OSPEEDR3 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 3. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7:6",
+      "name": "OSPEEDR3 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 3. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "9:8",
+      "name": "OSPEEDR4 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 4. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "9:8",
+      "name": "OSPEEDR4 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 4. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "11:10",
+      "name": "OSPEEDR5 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 5. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "11:10",
+      "name": "OSPEEDR5 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 5. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "13:12",
+      "name": "OSPEEDR6 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 6. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "13:12",
+      "name": "OSPEEDR6 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 6. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:14",
+      "name": "OSPEEDR7 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 7. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:14",
+      "name": "OSPEEDR7 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 7. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "17:16",
+      "name": "OSPEEDR8 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 8. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "17:16",
+      "name": "OSPEEDR8 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 8. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "19:18",
+      "name": "OSPEEDR9 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 9. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "19:18",
+      "name": "OSPEEDR9 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 9. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "21:20",
+      "name": "OSPEEDR10 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 10. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "21:20",
+      "name": "OSPEEDR10 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 10. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "23:22",
+      "name": "OSPEEDR11 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 11. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 23,
+      "rangeLabel": "23:22",
+      "name": "OSPEEDR11 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 11. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 24,
+      "rangeLabel": "25:24",
+      "name": "OSPEEDR12 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 12. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 25,
+      "rangeLabel": "25:24",
+      "name": "OSPEEDR12 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 12. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 26,
+      "rangeLabel": "27:26",
+      "name": "OSPEEDR13 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 13. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 27,
+      "rangeLabel": "27:26",
+      "name": "OSPEEDR13 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 13. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 28,
+      "rangeLabel": "29:28",
+      "name": "OSPEEDR14 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 14. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 29,
+      "rangeLabel": "29:28",
+      "name": "OSPEEDR14 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 14. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 30,
+      "rangeLabel": "31:30",
+      "name": "OSPEEDR15 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 15. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    },
+    {
+      "bit": 31,
+      "rangeLabel": "31:30",
+      "name": "OSPEEDR15 (Output Speed)",
+      "access": "R/W",
+      "desc": "Tốc độ đáp ứng tín hiệu của chân 15. Tốc độ càng cao thì càng hao điện và dễ nhiễu. Nên để Low [00] cho các việc cơ bản như bật tắt LED.",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 31,
+  "hasBits": true
+}

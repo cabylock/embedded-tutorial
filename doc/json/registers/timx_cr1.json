@@ -1,0 +1,195 @@
+{
+  "id": "TIMx_CR1 (Control Register 1)",
+  "title": "Control Register 1.",
+  "offset": "0x00",
+  "resetValue": "N/A",
+  "groupLabel": "TIMx (Basic/General Purpose Timers)",
+  "rows": [
+    {
+      "bits": "15:10",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "9:8",
+      "name": "CKD (Clock Division)",
+      "access": "R/W",
+      "desc": "Clock division (00: tDTS = tCK_INT, 01: tDTS = 2*tCK_INT...)"
+    },
+    {
+      "bits": "7",
+      "name": "ARPE (Auto-Reload Preload)",
+      "access": "R/W",
+      "desc": "Bật bộ đệm cho thanh ghi ARR (trần đếm). Nếu bật, giá trị mới ghi vào ARR sẽ chờ đếm xong vòng hiện tại mới được áp dụng."
+    },
+    {
+      "bits": "6:5",
+      "name": "CMS (Center-Aligned Mode)",
+      "access": "R/W",
+      "desc": "Center-aligned mode selection (00: Edge-aligned)"
+    },
+    {
+      "bits": "4",
+      "name": "DIR (Direction)",
+      "access": "R/W",
+      "desc": "Direction (0: Upcounter, 1: Downcounter)"
+    },
+    {
+      "bits": "3",
+      "name": "OPM (One-Pulse Mode)",
+      "access": "R/W",
+      "desc": "One-pulse mode (0: Continuous, 1: Stop at update)"
+    },
+    {
+      "bits": "2",
+      "name": "URS (Update Request Source)",
+      "access": "R/W",
+      "desc": "Update request source"
+    },
+    {
+      "bits": "1",
+      "name": "UDIS (Update Disable)",
+      "access": "R/W",
+      "desc": "Update disable"
+    },
+    {
+      "bits": "0",
+      "name": "CEN (Counter Enable)",
+      "access": "R/W",
+      "desc": "Nút Start của Timer. Ghi 1: Timer bắt đầu đếm. Ghi 0: Timer dừng lại."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "0",
+      "name": "CEN (Counter Enable)",
+      "access": "R/W",
+      "desc": "Nút Start của Timer. Ghi 1: Timer bắt đầu đếm. Ghi 0: Timer dừng lại.",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1",
+      "name": "UDIS (Update Disable)",
+      "access": "R/W",
+      "desc": "Update disable",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "2",
+      "name": "URS (Update Request Source)",
+      "access": "R/W",
+      "desc": "Update request source",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3",
+      "name": "OPM (One-Pulse Mode)",
+      "access": "R/W",
+      "desc": "One-pulse mode (0: Continuous, 1: Stop at update)",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "4",
+      "name": "DIR (Direction)",
+      "access": "R/W",
+      "desc": "Direction (0: Upcounter, 1: Downcounter)",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "6:5",
+      "name": "CMS (Center-Aligned Mode)",
+      "access": "R/W",
+      "desc": "Center-aligned mode selection (00: Edge-aligned)",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "6:5",
+      "name": "CMS (Center-Aligned Mode)",
+      "access": "R/W",
+      "desc": "Center-aligned mode selection (00: Edge-aligned)",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7",
+      "name": "ARPE (Auto-Reload Preload)",
+      "access": "R/W",
+      "desc": "Bật bộ đệm cho thanh ghi ARR (trần đếm). Nếu bật, giá trị mới ghi vào ARR sẽ chờ đếm xong vòng hiện tại mới được áp dụng.",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "9:8",
+      "name": "CKD (Clock Division)",
+      "access": "R/W",
+      "desc": "Clock division (00: tDTS = tCK_INT, 01: tDTS = 2*tCK_INT...)",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "9:8",
+      "name": "CKD (Clock Division)",
+      "access": "R/W",
+      "desc": "Clock division (00: tDTS = tCK_INT, 01: tDTS = 2*tCK_INT...)",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:10",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    }
+  ],
+  "maxBit": 15,
+  "hasBits": true
+}

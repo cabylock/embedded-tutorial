@@ -1,0 +1,281 @@
+{
+  "id": "GPIOx_IDR (Input Data Register)",
+  "title": "GPIO Port Input Data Register.",
+  "offset": "0x10",
+  "resetValue": "N/A",
+  "groupLabel": "GPIOx (General-Purpose I/Os)",
+  "rows": [
+    {
+      "bits": "31:16",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "15:0",
+      "name": "IDRy (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "15:0",
+      "name": "IDR0 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "15:0",
+      "name": "IDR1 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "15:0",
+      "name": "IDR2 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "15:0",
+      "name": "IDR3 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "15:0",
+      "name": "IDR4 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "15:0",
+      "name": "IDR5 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "15:0",
+      "name": "IDR6 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "15:0",
+      "name": "IDR7 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "15:0",
+      "name": "IDR8 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "15:0",
+      "name": "IDR9 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "15:0",
+      "name": "IDR10 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "15:0",
+      "name": "IDR11 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "15:0",
+      "name": "IDR12 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "15:0",
+      "name": "IDR13 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:0",
+      "name": "IDR14 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:0",
+      "name": "IDR15 (Input Data Register)",
+      "access": "R",
+      "desc": "Với ODR: Đây là giá trị xuất ra thực tế của 16 chân. Với IDR: Đây là giá trị điện áp đọc được từ bên ngoài của 16 chân.",
+      "isReserved": false
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 23,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 24,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 25,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 26,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 27,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 28,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 29,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 30,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 31,
+      "rangeLabel": "31:16",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    }
+  ],
+  "maxBit": 31,
+  "hasBits": true
+}

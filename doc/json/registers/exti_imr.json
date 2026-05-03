@@ -1,0 +1,203 @@
+{
+  "id": "EXTI_IMR (Interrupt Mask Register)",
+  "title": "Interrupt Mask Register.",
+  "offset": "0x00",
+  "resetValue": "N/A",
+  "groupLabel": "EXTI (External Interrupt)",
+  "rows": [
+    {
+      "bits": "22:0",
+      "name": "MRx (Interrupt Mask)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)"
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "22:0",
+      "name": "MR0 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "22:0",
+      "name": "MR1 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "22:0",
+      "name": "MR2 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "22:0",
+      "name": "MR3 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "22:0",
+      "name": "MR4 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "22:0",
+      "name": "MR5 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "22:0",
+      "name": "MR6 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "22:0",
+      "name": "MR7 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "22:0",
+      "name": "MR8 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "22:0",
+      "name": "MR9 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "22:0",
+      "name": "MR10 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "22:0",
+      "name": "MR11 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "22:0",
+      "name": "MR12 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "22:0",
+      "name": "MR13 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "22:0",
+      "name": "MR14 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "22:0",
+      "name": "MR15 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "22:0",
+      "name": "MR16 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "22:0",
+      "name": "MR17 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "22:0",
+      "name": "MR18 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "22:0",
+      "name": "MR19 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "22:0",
+      "name": "MR20 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "22:0",
+      "name": "MR21 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "22:0",
+      "name": "MR22 (Mask Register)",
+      "access": "R/W",
+      "desc": "Interrupt Mask on line x (0: Masked/Disabled, 1: Unmasked/Enabled)",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 22,
+  "hasBits": true
+}

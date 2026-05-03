@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh ghi STM32F401RE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Thanh ghi  (16 bit)</h1>
+        <p class="subtitle">Mô phỏng chi tiết bit và tổng hợp các thanh ghi đã dùng trong source.</p>
+    </header>
+
+    <div class="page-shell">
+        <aside class="sidebar">
+            <div class="sidebar-tab">Thanh ghi</div>
+            <section class="catalog">
+                <div class="catalog-head">
+                    <div>
+                        <h2>Thanh ghi đã dùng trong source</h2>
+                        <p class="subtitle">Tổng hợp nhanh theo từng peripheral để tiện tra cứu.</p>
+                    </div>
+                    <div class="catalog-filter">
+                        <label for="regFilter">Lọc nhanh</label>
+                        <input id="regFilter" type="text" placeholder="Tìm thanh ghi (VD: TIM2, GPIOA, RCC)">
+                    </div>
+                </div>
+                <div class="catalog-grid" id="registerCatalog"></div>
+            </section>
+        </aside>
+
+        <main class="main-content">
+            <div class="register-meta" id="registerMeta"></div>
+            <div class="register-container">
+                <!-- Vùng chứa số thứ tự bit dùng JS để tạo cho nhanh -->
+                <div class="bit-numbers" id="bitNumbers"></div>
+
+                <!-- Vùng chứa các ô bit chức năng -->
+                <div class="register-bits" id="registerBits">
+                    <!-- HTML sẽ được JS render vào đây -->
+                </div>
+            </div>
+
+            <div class="info-panel" id="infoPanel">
+                <div class="instruction">👈 Hãy click vào một bit bất kỳ trên thanh ghi để xem giải thích chi tiết.
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Edit JSON -->
+    <div class="modal-overlay" id="editModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Chỉnh sửa dữ liệu Thanh Ghi (JSON)</h3>
+                <button class="modal-close" id="closeEditBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <textarea id="jsonEditor" spellcheck="false"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancelEditBtn">Hủy</button>
+                <button class="btn btn-primary" id="saveEditBtn">Lưu & Tải xuống .json</button>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="app.js"></script>
+</body>
+
+</html>

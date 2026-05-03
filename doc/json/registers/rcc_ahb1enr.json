@@ -1,0 +1,347 @@
+{
+  "id": "RCC_AHB1ENR (AHB1 Peripheral Clock Enable Register)",
+  "title": "AHB1 Peripheral Clock Enable Register.",
+  "offset": "0x30",
+  "resetValue": "0x0000 0000",
+  "groupLabel": "RCC (Reset and Clock Control)",
+  "rows": [
+    {
+      "bits": "31:23",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "22",
+      "name": "DMA2EN (DMA2 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ DMA2. (Phải bật thì bộ DMA2 mới hoạt động được) (0 = Off, 1 = On)"
+    },
+    {
+      "bits": "21",
+      "name": "DMA1EN (DMA1 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ DMA1. (Phải bật thì bộ DMA1 mới hoạt động được)"
+    },
+    {
+      "bits": "20:13",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "12",
+      "name": "CRCEN (CRC Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ CRC. (Phải bật thì bộ CRC mới hoạt động được)"
+    },
+    {
+      "bits": "11:8",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "7",
+      "name": "GPIOHEN (GPIOH Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOH. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOH mới có thể hoạt động!"
+    },
+    {
+      "bits": "6:5",
+      "name": "Reserved",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)"
+    },
+    {
+      "bits": "4",
+      "name": "GPIOEEN (GPIOE Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOE. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOE mới có thể hoạt động!"
+    },
+    {
+      "bits": "3",
+      "name": "GPIODEN (GPIOD Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOD. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOD mới có thể hoạt động!"
+    },
+    {
+      "bits": "2",
+      "name": "GPIOCEN (GPIOC Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOC. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOC mới có thể hoạt động!"
+    },
+    {
+      "bits": "1",
+      "name": "GPIOBEN (GPIOB Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOB. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOB mới có thể hoạt động!"
+    },
+    {
+      "bits": "0",
+      "name": "GPIOAEN (GPIOA Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOA. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOA mới có thể hoạt động!"
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "0",
+      "name": "GPIOAEN (GPIOA Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOA. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOA mới có thể hoạt động!",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1",
+      "name": "GPIOBEN (GPIOB Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOB. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOB mới có thể hoạt động!",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "2",
+      "name": "GPIOCEN (GPIOC Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOC. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOC mới có thể hoạt động!",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3",
+      "name": "GPIODEN (GPIOD Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOD. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOD mới có thể hoạt động!",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "4",
+      "name": "GPIOEEN (GPIOE Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOE. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOE mới có thể hoạt động!",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "6:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "6:5",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7",
+      "name": "GPIOHEN (GPIOH Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp (clock) cho cổng GPIOH. LƯU Ý: Phải ghi mức 1 để bật nguồn thì cổng GPIOH mới có thể hoạt động!",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "11:8",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "11:8",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "11:8",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "11:8",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "12",
+      "name": "CRCEN (CRC Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ CRC. (Phải bật thì bộ CRC mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "20:13",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "20:13",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "20:13",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "20:13",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "20:13",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "20:13",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "20:13",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "20:13",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "21",
+      "name": "DMA1EN (DMA1 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ DMA1. (Phải bật thì bộ DMA1 mới hoạt động được)",
+      "isReserved": false
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "22",
+      "name": "DMA2EN (DMA2 Enable)",
+      "access": "R/W",
+      "desc": "Bật nguồn xung nhịp cho bộ DMA2. (Phải bật thì bộ DMA2 mới hoạt động được) (0 = Off, 1 = On)",
+      "isReserved": false
+    },
+    {
+      "bit": 23,
+      "rangeLabel": "31:23",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 24,
+      "rangeLabel": "31:23",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 25,
+      "rangeLabel": "31:23",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 26,
+      "rangeLabel": "31:23",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 27,
+      "rangeLabel": "31:23",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 28,
+      "rangeLabel": "31:23",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 29,
+      "rangeLabel": "31:23",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 30,
+      "rangeLabel": "31:23",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    },
+    {
+      "bit": 31,
+      "rangeLabel": "31:23",
+      "name": "Res",
+      "access": "-",
+      "desc": "Không sử dụng (Reserved)",
+      "isReserved": true
+    }
+  ],
+  "maxBit": 31,
+  "hasBits": true
+}

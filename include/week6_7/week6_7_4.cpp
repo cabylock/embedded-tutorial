@@ -60,7 +60,6 @@ void tim2_init_input_capture(void)
 void hcsr04_send_trigger(void)
 {
    uint32_t start;
-
    GPIOA->BSRR = (1 << 1);
    start = TIM2->CNT;
 

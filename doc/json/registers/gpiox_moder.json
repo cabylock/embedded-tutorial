@@ -1,0 +1,365 @@
+{
+  "id": "GPIOx_MODER (Mode Register)",
+  "title": "GPIO Port Mode Register.",
+  "offset": "0x00",
+  "resetValue": "N/A",
+  "groupLabel": "GPIOx (General-Purpose I/Os)",
+  "rows": [
+    {
+      "bits": "31:30",
+      "name": "MODER15 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 15. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "29:28",
+      "name": "MODER14 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 14. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "27:26",
+      "name": "MODER13 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 13. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "25:24",
+      "name": "MODER12 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 12. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "23:22",
+      "name": "MODER11 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 11. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "21:20",
+      "name": "MODER10 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 10. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "19:18",
+      "name": "MODER9 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 9. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "17:16",
+      "name": "MODER8 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 8. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "15:14",
+      "name": "MODER7 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 7. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "13:12",
+      "name": "MODER6 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 6. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "11:10",
+      "name": "MODER5 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 5. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "9:8",
+      "name": "MODER4 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 4. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "7:6",
+      "name": "MODER3 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 3. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "5:4",
+      "name": "MODER2 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 2. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "3:2",
+      "name": "MODER1 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 1. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    },
+    {
+      "bits": "1:0",
+      "name": "MODER0 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 0. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC)."
+    }
+  ],
+  "bits": [
+    {
+      "bit": 0,
+      "rangeLabel": "1:0",
+      "name": "MODER0 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 0. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 1,
+      "rangeLabel": "1:0",
+      "name": "MODER0 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 0. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 2,
+      "rangeLabel": "3:2",
+      "name": "MODER1 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 1. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 3,
+      "rangeLabel": "3:2",
+      "name": "MODER1 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 1. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 4,
+      "rangeLabel": "5:4",
+      "name": "MODER2 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 2. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 5,
+      "rangeLabel": "5:4",
+      "name": "MODER2 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 2. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 6,
+      "rangeLabel": "7:6",
+      "name": "MODER3 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 3. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 7,
+      "rangeLabel": "7:6",
+      "name": "MODER3 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 3. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 8,
+      "rangeLabel": "9:8",
+      "name": "MODER4 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 4. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 9,
+      "rangeLabel": "9:8",
+      "name": "MODER4 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 4. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 10,
+      "rangeLabel": "11:10",
+      "name": "MODER5 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 5. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 11,
+      "rangeLabel": "11:10",
+      "name": "MODER5 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 5. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 12,
+      "rangeLabel": "13:12",
+      "name": "MODER6 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 6. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 13,
+      "rangeLabel": "13:12",
+      "name": "MODER6 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 6. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 14,
+      "rangeLabel": "15:14",
+      "name": "MODER7 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 7. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 15,
+      "rangeLabel": "15:14",
+      "name": "MODER7 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 7. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 16,
+      "rangeLabel": "17:16",
+      "name": "MODER8 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 8. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 17,
+      "rangeLabel": "17:16",
+      "name": "MODER8 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 8. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 18,
+      "rangeLabel": "19:18",
+      "name": "MODER9 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 9. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 19,
+      "rangeLabel": "19:18",
+      "name": "MODER9 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 9. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 20,
+      "rangeLabel": "21:20",
+      "name": "MODER10 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 10. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 21,
+      "rangeLabel": "21:20",
+      "name": "MODER10 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 10. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 22,
+      "rangeLabel": "23:22",
+      "name": "MODER11 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 11. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 23,
+      "rangeLabel": "23:22",
+      "name": "MODER11 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 11. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 24,
+      "rangeLabel": "25:24",
+      "name": "MODER12 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 12. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 25,
+      "rangeLabel": "25:24",
+      "name": "MODER12 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 12. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 26,
+      "rangeLabel": "27:26",
+      "name": "MODER13 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 13. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 27,
+      "rangeLabel": "27:26",
+      "name": "MODER13 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 13. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 28,
+      "rangeLabel": "29:28",
+      "name": "MODER14 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 14. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 29,
+      "rangeLabel": "29:28",
+      "name": "MODER14 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 14. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 30,
+      "rangeLabel": "31:30",
+      "name": "MODER15 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 15. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    },
+    {
+      "bit": 31,
+      "rangeLabel": "31:30",
+      "name": "MODER15 (Mode Register)",
+      "access": "R/W",
+      "desc": "Chế độ hoạt động của chân 15. [00]: Nhận tín hiệu (Input), [01]: Xuất tín hiệu (Output), [10]: Chức năng phụ (AF - vd: TX/RX, PWM), [11]: Analog (đọc ADC).",
+      "isReserved": false
+    }
+  ],
+  "maxBit": 31,
+  "hasBits": true
+}
