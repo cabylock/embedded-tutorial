@@ -37,12 +37,12 @@ async function init() {
 
 async function loadAllRegisters() {
    try {
-      const response = await fetch("../json/registers/index.json");
+      const response = await fetch("json/registers/index.json");
       if (!response.ok) return [];
       const files = await response.json();
-      const promises = files.map(file => fetch(`../json/registers/${file}`).then(r => r.json()));
+      const promises = files.map(file => fetch(`json/registers/${file}`).then(r => r.json()));
       const registers = await Promise.all(promises);
-      
+
       let currentGroupIndex = 0;
       const groupIndexMap = new Map();
       registers.forEach(reg => {
@@ -184,7 +184,7 @@ function renderBitLayout(register) {
    registerBitsDiv.style.setProperty("--bit-count", rowBitCount);
    bitNumbersDiv.style.minWidth = `${minWidth}px`;
    registerBitsDiv.style.minWidth = `${minWidth}px`;
-   
+
    registerBitsDiv.classList.toggle("dense", rowBitCount > 20);
    registerBitsDiv.classList.remove("empty");
    registerBitsDiv.classList.toggle("two-rows", useTwoRows);
@@ -197,10 +197,10 @@ function renderBitLayout(register) {
       const bitBox = document.createElement("button");
       bitBox.type = "button";
       bitBox.className = `bit-box ${entry.isReserved ? "reserved" : ""}`;
-      
+
       const cleanNameForButton = entry.name.replace(/<br\s*\/?>/gi, " ").replace(/\*\*(.*?)\*\*/g, "$1").replace(/\s*\([^)]*\)/g, "").trim();
       const cleanNameForTitle = entry.name.replace(/<br\s*\/?>/gi, " ").replace(/\*\*(.*?)\*\*/g, "$1").trim();
-      
+
       bitBox.textContent = cleanNameForButton;
       bitBox.title = `${cleanNameForTitle} [${entry.rangeLabel}]`;
 
@@ -329,7 +329,7 @@ saveEditBtn.addEventListener('click', () => {
          downloadJSON(parsed.id.toLowerCase() + '.json', JSON.stringify(parsed, null, 2));
          closeEditModal();
       }
-   } catch(e) {
+   } catch (e) {
       alert('JSON không hợp lệ: ' + e.message);
    }
 });
